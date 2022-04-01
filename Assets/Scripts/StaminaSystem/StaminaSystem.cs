@@ -29,12 +29,10 @@ public class StaminaSystem : MonoBehaviour
     private bool waiting;
 
     private InputSystemKeyboard _inputSystem;
-    private CharacterController _character;
 
     private void Awake()
     {
         _inputSystem = GetComponent<InputSystemKeyboard>();
-        _character = GetComponent<CharacterController>();
 
         StaminaManager.maxStamina = maxStamina;
     }
@@ -64,7 +62,7 @@ public class StaminaSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Choose wich decrement value we need
+       //Choose wich decrement value we need
         if (crouched && jumping)
         {
             activeStaminaDecrease = jumpCrouchDecrease;
@@ -123,7 +121,7 @@ public class StaminaSystem : MonoBehaviour
         }
 
         //Timer to start regenerate stamina
-        if (waiting && stamina <= maxStamina && _character.isGrounded)
+        if (waiting && stamina <= maxStamina && GroundCheckerManager.isGrounded)
         {
             if (waitTimer <= 0)
             {
@@ -150,7 +148,7 @@ public class StaminaSystem : MonoBehaviour
     //Detects is we are running
     void SetRunDecrease(bool run)
     {
-        if (!crouched && _character.isGrounded)
+        if (!crouched && GroundCheckerManager.isGrounded)
         {
             running = run;
         }
@@ -159,7 +157,7 @@ public class StaminaSystem : MonoBehaviour
     //Detects if we are crouch
     void SetCrouchDecrease()
     {
-        if (_character.isGrounded)
+        if (GroundCheckerManager.isGrounded)
         {
             if (!crouched)
             {
@@ -175,7 +173,7 @@ public class StaminaSystem : MonoBehaviour
     //Detects if we are jumping
     void SetJumpDecrease()
     {
-        if (_character.isGrounded)
+        if (GroundCheckerManager.isGrounded)
         {
             jumping = true;
         }

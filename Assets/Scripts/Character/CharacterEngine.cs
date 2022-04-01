@@ -13,8 +13,6 @@ public class CharacterEngine : MonoBehaviour
 	[SerializeField]
 	private float runSpeed;
 	[SerializeField]
-	private float gravity;
-	[SerializeField]
 	private float jumpForce;
 	[SerializeField]
 	private float crouchJumpForce;
@@ -22,8 +20,11 @@ public class CharacterEngine : MonoBehaviour
 	private float withoutStaminaJumpForce;
 	[SerializeField]
 	private float sensitivity;
+	[SerializeField]
+	private float gravity;
 
-	public GameObject cam;
+    public GameObject cam;
+
 
 	private float moveFB; //Move Front/Back
 	private float moveLR; //Move Left/Right
@@ -34,13 +35,12 @@ public class CharacterEngine : MonoBehaviour
 
 	private bool crouched;
 	private bool jump;
-	private bool run;
 
 	public float activeSpeed;
 	public float activeJumpForce;
 
 	private InputSystemKeyboard _inputSystem;
-	private CharacterController _character;
+	private Rigidbody _rb;
 
 	//Debug
 	private MeshRenderer _renderer;
@@ -49,8 +49,8 @@ public class CharacterEngine : MonoBehaviour
 
 	private void Awake()
 	{
-		_character = GetComponent<CharacterController>();
 		_inputSystem = GetComponent<InputSystemKeyboard>();
+		_rb = GetComponent<Rigidbody>();
 
 		_renderer = GetComponent<MeshRenderer>();
 	}
@@ -94,21 +94,24 @@ public class CharacterEngine : MonoBehaviour
 			jump = false;
         }
 
-		if (StaminaManager.currentStamina <= 0)
-        {
-			activeSpeed = withoutStaminaSpeed;
-			activeJumpForce = withoutStaminaJumpForce;
-        }
-
-		directionY -= gravity * Time.fixedDeltaTime;
+		if (!GroundCheckerManager.isGrounded)
+		{
+			directionY -= gravity * Time.fixedDeltaTime;
+		}
 
 		movement.y = directionY;
 
-		movement = transform.rotation * movement;
-		_character.Move(movement * Time.fixedDeltaTime);
+		if (StaminaManager.currentStamina <= 0)
+		{
+			activeSpeed = withoutStaminaSpeed;
+			activeJumpForce = withoutStaminaJumpForce;
+		}
 
+		movement = transform.rotation * movement;
+		_rb.velocity= new Vector3(movement.x, movement.y, movement.z);
 
 		CameraRotation(cam, rotHor, rotVer);
+
 
 		//Debug
 		GroundDetector();
@@ -130,7 +133,7 @@ public class CharacterEngine : MonoBehaviour
 
 	void SetCrouch()
     {
-		if (_character.isGrounded)
+		if (GroundCheckerManager.isGrounded)
 		{
 			if (!crouched)
 			{
@@ -154,7 +157,7 @@ public class CharacterEngine : MonoBehaviour
 
 	void SetJump()
 	{
-		if (_character.isGrounded)
+		if (GroundCheckerManager.isGrounded)
 		{
 			jump = true;
 		}
@@ -162,7 +165,7 @@ public class CharacterEngine : MonoBehaviour
 
 	void SetRun(bool run)
     {
-		if (!crouched && _character.isGrounded && StaminaManager.currentStamina >= 0)
+		if (!crouched && GroundCheckerManager.isGrounded && StaminaManager.currentStamina >= 0)
 		{
 			if (run)
 			{
@@ -182,8 +185,8 @@ public class CharacterEngine : MonoBehaviour
     }
 
 	void GroundDetector()
-    {
-		if (_character.isGrounded)
+	{
+		if (GroundCheckerManager.isGrounded)
 		{
 			_renderer.material = matGrounded;
 		}

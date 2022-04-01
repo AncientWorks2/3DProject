@@ -12799,6 +12799,7 @@ GameObject:
   - component: {fileID: 1495172051}
   - component: {fileID: 1495172058}
   - component: {fileID: 1495172059}
+  - component: {fileID: 1495172061}
   m_Layer: 0
   m_Name: CharacterTests
   m_TagString: Untagged
@@ -12822,11 +12823,11 @@ MonoBehaviour:
   withoutStaminaSpeed: 5
   crouchSpeed: 5
   runSpeed: 15
-  gravity: 9.81
   jumpForce: 5
   crouchJumpForce: 2.5
   withoutStaminaJumpForce: 2
   sensitivity: 100
+  gravity: 9.81
   cam: {fileID: 2145250723}
   activeSpeed: 0
   activeJumpForce: 0
@@ -12987,6 +12988,19 @@ CapsuleCollider:
   m_Height: 1.9
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1495172061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495172050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0733862db6b6a4d86cf393d54cb426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 1.5
 --- !u!4 &1497539280 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4994399380068676, guid: 113eb5af96ee2094eac8dc88dfc5b274, type: 3}

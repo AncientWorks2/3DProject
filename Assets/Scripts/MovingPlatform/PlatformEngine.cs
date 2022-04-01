@@ -14,30 +14,20 @@ public class PlatformEngine : MonoBehaviour
     private float distance;
 
     private float startWaitTime;
-    public int platformToMove;
+    private int platformToMove;
 
     public bool palanca;
-
-    private Vector3 currentPos;
-
-    private Rigidbody _rb;
-    private CharacterController _cc;
 
     // Start is called before the first frame update
     void Start()
     {
         startWaitTime = waitTime;
-
-        _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, platPositions[platformToMove].position, speed * Time.deltaTime);
-
-        /*currentPos = Vector3.Lerp(platPositions[0].position, platPositions[platformToMove].position, Mathf.Cos(Time.time / speed * Mathf.PI * 2) * -0.5f + 0.5f);
-        _rb.MovePosition(currentPos);*/
 
         if (Vector3.Distance(transform.position, platPositions[platformToMove].position) < distance)
         {
@@ -72,12 +62,7 @@ public class PlatformEngine : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //_cc = collision.GetComponent<CharacterController>();
-
-            //_cc = collision.GetComponent<CharacterController>();
-
             collision.transform.SetParent(transform);
-            Debug.Log("Collision Eneter");
         }
     }
 
@@ -85,12 +70,7 @@ public class PlatformEngine : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //_cc.Move(new Vector3(collision.transform.position.x + 2f, collision.transform.position.y + 1.5f, collision.transform.position.z + 2f) * Time.deltaTime);
-            //collision.transform.position = Vector3.MoveTowards(collision.transform.position, platPositions[platformToMove].position, speed * Time.deltaTime);
-
             collision.transform.SetParent(null);
-
-            Debug.Log("Collision Exit");
         }
     }
 }
