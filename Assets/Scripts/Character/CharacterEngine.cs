@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterEngine : MonoBehaviour 
 {
+	[Header("Character Speed")]
 	[SerializeField]
 	private float speed;
 	[SerializeField]
@@ -12,12 +13,16 @@ public class CharacterEngine : MonoBehaviour
 	private float crouchSpeed;
 	[SerializeField]
 	private float runSpeed;
+
+	[Header("Character Jump")]
 	[SerializeField]
 	private float jumpForce;
 	[SerializeField]
 	private float crouchJumpForce;
 	[SerializeField]
 	private float withoutStaminaJumpForce;
+
+	[Header("Mouse Sensitivity")]
 	[SerializeField]
 	private float sensitivity;
 	[SerializeField]
@@ -36,6 +41,7 @@ public class CharacterEngine : MonoBehaviour
 	private bool crouched;
 	private bool jump;
 
+	[Header("RealTime Amount")]
 	public float activeSpeed;
 	public float activeJumpForce;
 

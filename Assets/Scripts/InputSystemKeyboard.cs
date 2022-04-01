@@ -16,6 +16,8 @@ public class InputSystemKeyboard : MonoBehaviour
     public event Action OnJump = delegate { };
     public event Action OnCrouch = delegate { };
     public event Action<bool> OnRun = delegate { };
+    public event Action<bool> OnInteract = delegate { };
+
 
     //GoodKeys events
     public event Action OnInvencible = delegate { };
@@ -54,6 +56,10 @@ public class InputSystemKeyboard : MonoBehaviour
         {
             OnRun(false);
         }
+
+        //InteractButton
+        if (Input.GetKeyDown(KeyCode.E)) { OnInteract(true); }
+        else { OnInteract(false); }
 
         //God Keys
         //Invencible
