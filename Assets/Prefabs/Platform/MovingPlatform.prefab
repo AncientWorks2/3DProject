@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2455417599033394556}
   - component: {fileID: 7874175200083856468}
   - component: {fileID: 521907326717010012}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: MovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 56cf6ac6083a30c4c865d88dbfc9384c, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 4a5d70536c6bd70428b77cb6ab8b31c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,8 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d2b68d3466a744786d97950a4d3199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  platPositions: []
-  waitTime: 0
-  distance: 0
+  speed: 2
+  platPositions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  waitTime: 3
+  distance: 0.2
   palanca: 0

@@ -68,4 +68,14 @@ public class InputSystemKeyboard : MonoBehaviour
             OnInvencible();
         }
     }
+
+    public float ReturnAxHor()
+    {
+        return axHor;
+    }
+
+    public float ReturnAxVer()
+    {
+        return axVer;
+    }
 }

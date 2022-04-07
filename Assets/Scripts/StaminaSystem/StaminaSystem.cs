@@ -62,7 +62,7 @@ public class StaminaSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //Choose wich decrement value we need
+        //Choose wich decrement value we need
         if (crouched && jumping)
         {
             activeStaminaDecrease = jumpCrouchDecrease;
@@ -77,7 +77,7 @@ public class StaminaSystem : MonoBehaviour
 
             jumping = false;
         }
-        else if (running && !jumping) 
+        else if (running && !jumping)
         {
             if (_inputSystem.axHor != 0 || _inputSystem.axVer != 0)
             {
