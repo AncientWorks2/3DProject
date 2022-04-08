@@ -113,18 +113,18 @@ ModelImporter:
     serializedVersion: 3
     human: []
     skeleton:
-    - name: pirate_p_konstantinov(Clone)
+    - name: Character(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: VoidPirate
-      parentName: pirate_p_konstantinov(Clone)
+      parentName: Character(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Hips
-      parentName: pirate_p_konstantinov(Clone)
+      parentName: Character(Clone)
       position: {x: -0.0010258959, y: 0.37128332, z: -0.00014697063}
       rotation: {x: -0.000012105956, y: -0.000014986446, z: 0.00044636175, w: 0.99999994}
       scale: {x: 1, y: 1, z: 1}
@@ -460,7 +460,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: c001a71b1bcfd1f409e004a9cfdadc0e, type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 9f42b43ab315dfe4dbf452389b1d35d4, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1

@@ -67,6 +67,16 @@ public class InputSystemKeyboard : MonoBehaviour
         {
             OnInvencible();
         }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SceneManager.LoadScene("Level1Scene");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SceneManager.LoadScene("Level2Scene");
+        }
     }
 
     public float ReturnAxHor()
