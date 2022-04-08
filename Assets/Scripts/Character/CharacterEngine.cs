@@ -40,7 +40,7 @@ public class CharacterEngine : MonoBehaviour
 	private bool jump;
 	private bool run;
 
-	private float activeSpeed;
+	public static float activeSpeed;
 	private float activeJumpForce;
 
 	private InputSystemKeyboard _inputSystem;
