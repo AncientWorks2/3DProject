@@ -14,8 +14,8 @@ public class Minimap : MonoBehaviour
     public Material objectMaterial;
     public Material rampMaterial;
 
-    public Transform minimapCamera;
-    public Transform player;
+    public Transform[] minimapCamera;
+    public Transform[] player;
     public Transform[] enemies;
     public Transform[] securityCamera;
     public Transform[] floor;
@@ -31,10 +31,9 @@ public class Minimap : MonoBehaviour
     public Vector3 wallVerOffset;
     public Vector3 wallHorOffset;
     public Transform minimapPos;
+    public float cameraDistance;
 
-    private float playerRot;
-    private float rot;
-
+    private Vector3 playerC;
 
     private Matrix4x4 wallMatrix;
 
@@ -47,34 +46,27 @@ public class Minimap : MonoBehaviour
     void Update()
     {
         //Player
-
-        if (player.localRotation.y < 0)
+        for (int i = 0; i < player.Length; i++)
         {
-            playerRot = -player.localRotation.y;
-            rot = -165;
-            Debug.Log("<0: " + playerRot);
+            Vector3 playerW = player[i].position;
+            playerC = minimapPos.InverseTransformPoint(playerW);
+
+            Matrix4x4 playerMatrix = minimapPos.localToWorldMatrix * Matrix4x4.Translate(cameraOffset) *
+                                        Matrix4x4.Scale(Vector3.one * scale) * Matrix4x4.Translate(new Vector3(playerC.x, playerC.z, 1)) *
+                                        Matrix4x4.Scale(Vector3.one * dotScale); // * Matrix4x4.Rotate(Quaternion.Euler(0, 0, -playerRot * rot));
+
+            Graphics.DrawMesh(model, playerMatrix, playerMaterial, 0);
         }
-        else
-        {
-            playerRot = player.localRotation.y;
-            rot = 165;
-            Debug.Log(">0: " + playerRot);
-        }
-
-        Vector3 playerW = player.position;
-        Vector3 playerC = minimapPos.InverseTransformPoint(playerW);
-
-        Matrix4x4 playerMatrix = minimapPos.localToWorldMatrix * Matrix4x4.Translate(cameraOffset) *
-                                    Matrix4x4.Scale(Vector3.one * scale) * Matrix4x4.Translate(new Vector3(playerC.x, playerC.z, 1)) *
-                                    Matrix4x4.Scale(Vector3.one * dotScale); // * Matrix4x4.Rotate(Quaternion.Euler(0, 0, -playerRot * rot));
-
-        Graphics.DrawMesh(model, playerMatrix, playerMaterial, 0);
+        
 
         //minimapCamera.transform.position = new Vector3(minimapPos.transform.position.x * cameraOffset.x, minimapPos.transform.position.y * cameraOffset.y, minimapPos.transform.position.z * cameraOffset.z);
 
         //Camera move
-        minimapCamera.transform.position = new Vector3(playerC.x * scale, playerC.z * scale, player.position.y);
-        //minimapCamera.transform.rotation =  Quaternion.Euler(0, 0, -player.rotation.y);
+        for (int i = 0; i < minimapCamera.Length; i++)
+        {
+            minimapCamera[i].transform.position = new Vector3(playerC.x * scale, playerC.z * scale, cameraDistance);
+
+        }
 
 
         //Enemies
