@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 33544274303528138}
   - component: {fileID: 23486310792794668}
   - component: {fileID: 4066485998840908341}
-  - component: {fileID: 5282256685488220184}
+  - component: {fileID: 649789435}
   m_Layer: 0
   m_Name: Deck_Door_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4053863791800276
 Transform:
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9375005, y: 2.4996874, z: 0.12500381}
   m_Center: {x: 0.96875024, y: 1.2498437, z: 0.0000104904175}
---- !u!114 &5282256685488220184
+--- !u!114 &649789435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,11 +107,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1845894196456500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99bac0598167d724dbfe55c4eae0ea6e, type: 3}
+  m_Script: {fileID: 11500000, guid: cddd446127460b242a4c87a8b4962acc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionType: 1
-  autoClose: 1
+  interactionType: 0
+  autoClose: 0
   speed: 3
-  isOpening: 0
+  lockedByPassword: 0
+  pivot: {fileID: 0}
   endDoor: {fileID: 0}
+  categoryDisplay: 0

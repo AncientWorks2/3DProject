@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DoorSystemSliding : InteractManager
 {
+
     //Positions Door
     private Vector3 endTargetPosition;
     private Vector3 startTargetPosition;
@@ -11,11 +12,10 @@ public class DoorSystemSliding : InteractManager
     //Settings
     [SerializeField] private bool autoClose;
     [SerializeField] private float speed;
-    [SerializeField] private bool isOpening;
-
+   
     [SerializeField] private Transform endDoor;
 
-    
+    private bool isOpening;
     private float timer;
     private bool isOpen;
     // Start is called before the first frame update
@@ -46,6 +46,8 @@ public class DoorSystemSliding : InteractManager
     }
     public void ToggleDoor()
     {
+  
+
         isOpen = !isOpen;
 
         if (isOpen)
