@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 6100979e9a0e8d2448f850a83ea70f45, type: 2}
 --- !u!1 &33549656
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,8 +1142,10 @@ MonoBehaviour:
   floorMaterial: {fileID: 2100000, guid: 02bd91381f68c6645b2bf4d8f367669c, type: 2}
   objectMaterial: {fileID: 2100000, guid: aa93446742a83a84b95cf88cd2e7c402, type: 2}
   rampMaterial: {fileID: 2100000, guid: ac0539dfe1fc30f4d99dca301838f8c3, type: 2}
-  minimapCamera: []
-  player: []
+  minimapCamera:
+  - {fileID: 1373843606}
+  player:
+  - {fileID: 1911139618}
   enemies: []
   securityCamera: []
   floor: []
