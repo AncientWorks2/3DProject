@@ -19,8 +19,9 @@ public class FieldOfView : MonoBehaviour
     private Color viewColor;
 
     //Send info
-    public bool seePlayer;
-    public Transform target;
+    private bool seePlayer;
+    private Transform target;
+    private RaycastHit hit;
 
     private Color spotlightOriginalColor;
 
@@ -42,7 +43,7 @@ public class FieldOfView : MonoBehaviour
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
+                if (Physics.Raycast(transform.position, directionToTarget, out hit, distanceToTarget, targetMask))
                 {
                     seePlayer = true;
 
@@ -80,5 +81,20 @@ public class FieldOfView : MonoBehaviour
         {
             viewLight.color = spotlightOriginalColor;
         }
+    }
+
+    public bool ReturnSeePlayer()
+    {
+        return seePlayer;
+    }
+
+    public Transform ReturnTargetTransform()
+    {
+        return target;
+    }
+
+    public RaycastHit ReturnHit()
+    {
+        return hit;
     }
 }

@@ -37,9 +37,9 @@ public class EnemyWarriorNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_fieldView.seePlayer)
+        if (_fieldView.ReturnSeePlayer())
         {
-            _navmesh.destination = _fieldView.target.position;
+            _navmesh.destination = _fieldView.ReturnTargetTransform().position;
         }
         else if (_navmesh.remainingDistance < 1)
         {
