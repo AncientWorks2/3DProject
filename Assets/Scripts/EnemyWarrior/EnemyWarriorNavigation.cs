@@ -10,13 +10,17 @@ public class EnemyWarriorNavigation : MonoBehaviour
     [SerializeField]
     private Transform playerPosition;
     [SerializeField]
-    private float speed;
-    
+    private float normalSpeed;
+    [SerializeField]
+    private float runSpeed;    
 
     //Timer
     [SerializeField]
     private float waitTime;
     private float startWaitTime;
+
+    private bool patrol;
+    private bool guard;
 
     private FieldOfView _fieldView;
     private NavMeshAgent _navmesh;
@@ -39,24 +43,46 @@ public class EnemyWarriorNavigation : MonoBehaviour
     {
         if (_fieldView.ReturnSeePlayer())
         {
+            _navmesh.speed = runSpeed;
+
             _navmesh.destination = _fieldView.ReturnTargetTransform().position;
+
+            patrol = false;
+            guard = false;
         }
         else if (_navmesh.remainingDistance < 1)
         {
+            patrol = false;
+            guard = true;
+
+            _navmesh.speed = normalSpeed;
+
             if (waitTime <= 0)
             {
                 waitTime = startWaitTime;
 
                 int p = UnityEngine.Random.Range(0, positions.Length);
-                _navmesh.destination = positions[p].position;
+                _navmesh.destination = positions[p].position;                
             }
             else
             {
                 waitTime -= Time.deltaTime;
-            }
-            
+            }            
         }
+        else
+        {
+            patrol = true;
+            guard = false;
+        }
+    }
 
+    public bool ReturnPatrol()
+    {
+        return patrol;
+    }
 
+    public bool ReturnGuard()
+    {
+        return guard;
     }
 }
