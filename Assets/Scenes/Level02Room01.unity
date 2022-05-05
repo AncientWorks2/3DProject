@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3725,6 +3725,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4477030707949804, guid: 00debf980412c49418327c56a1a60db0, type: 3}
   m_PrefabInstance: {fileID: 366488017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &367952160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3962574768641900268, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
+  m_PrefabInstance: {fileID: 1553880919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &367952161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367952160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a753e55d4789204fb266a5fa49d68d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  categoryDisplay: 0
+--- !u!54 &367952164
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367952160}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &370463931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11849,7 +11883,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5956455058962496819, guid: 34f6485612bc59c4f80e9338688c368d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -55.91501
+      value: -55.936
       objectReference: {fileID: 0}
     - target: {fileID: 5956455058962496819, guid: 34f6485612bc59c4f80e9338688c368d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12581,15 +12615,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4446799326750123094, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -265.80002
+      value: -270.161
       objectReference: {fileID: 0}
     - target: {fileID: 4446799326750123094, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.276
+      value: 1.281
       objectReference: {fileID: 0}
     - target: {fileID: 4446799326750123094, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -39
+      value: -39.248
       objectReference: {fileID: 0}
     - target: {fileID: 4446799326750123094, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13591,7 +13625,7 @@ PrefabInstance:
     - target: {fileID: 4874377872252839463, guid: 2e3e574da2c25d04c8939935d383335e, type: 3}
       propertyPath: globalCanvas
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7875799409414115774, guid: 7e458f0d506f9be4d952267e07e02cee, type: 3}
     - target: {fileID: 4874377872252839463, guid: 2e3e574da2c25d04c8939935d383335e, type: 3}
       propertyPath: inspectionObject.Array.size
       value: 1
