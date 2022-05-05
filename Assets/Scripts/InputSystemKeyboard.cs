@@ -21,6 +21,9 @@ public class InputSystemKeyboard : MonoBehaviour
     public event Action<bool> OnPick = delegate { };
     public event Action OnThrow = delegate { };
 
+    //KeyPad
+    public event Action<bool> OnKeyPad = delegate { };
+
 
     //GoodKeys events
     public event Action OnInvencible = delegate { };
@@ -65,8 +68,8 @@ public class InputSystemKeyboard : MonoBehaviour
         else { OnInteract(false); }
 
         //PickUpKey
-        if (Input.GetMouseButtonDown(0)) { OnPick(true); }
-        else { OnPick(false); }
+        if (Input.GetMouseButtonDown(0)) { OnPick(true); OnKeyPad(true); }
+        else { OnPick(false); OnKeyPad(false); }
 
         //ThrowObjectKey
         if (Input.GetMouseButtonDown(1)) { OnThrow(); }

@@ -12,30 +12,27 @@ public class PlayerInteractable : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI interactionText;
     [SerializeField] private GameObject interactionHoldGO;
     [SerializeField] private Image interactionHold;
-    
 
+    private bool interactKeypad;
     private bool interact;
-    private InputSystemKeyboard _inputSystem;
-
-    void Awake()
-    {
-        _inputSystem = GetComponent<InputSystemKeyboard>();
-    }
     private void OnEnable()
     {
-        _inputSystem.OnInteract += SetInteract;
+        GetComponent<InputSystemKeyboard>().OnInteract += SetInteract;
+        GetComponent<InputSystemKeyboard>().OnKeyPad += SetKeyPad;
 
     }
 
     private void OnDisable()
     {
-        _inputSystem.OnInteract -= SetInteract;
+        GetComponent<InputSystemKeyboard>().OnInteract -= SetInteract;
+        GetComponent<InputSystemKeyboard>().OnKeyPad -= SetKeyPad;
 
     }
 
     void Start()
     {
         interact = false;
+        interactKeypad = false;
     }
 
     void Update()
@@ -60,7 +57,19 @@ public class PlayerInteractable : MonoBehaviour
 
         }
 
- 
+        float distance = Vector3.Distance(transform.position, hit.transform.position);
+        if (distance <= 3f)
+        {
+            if (interactKeypad)
+            {
+                if (hit.transform.GetComponent<KeypadKey>() != null)
+                {
+                    hit.transform.GetComponent<KeypadKey>().SendKey();
+                }
+
+            }
+        }
+
         if (!successfulHit)
         {
             interactionText.text = "";
@@ -77,7 +86,6 @@ public class PlayerInteractable : MonoBehaviour
                 if (interact)
                 {
                     interactable.Interact();
-                    Debug.Log("Funcionando");
                     interact = false;
                 }
                 break;
@@ -89,7 +97,6 @@ public class PlayerInteractable : MonoBehaviour
                     if (interactable.GetHoldTime() > 1f) {
                         interactable.Interact();
                         interactable.ResetHoldTime();
-                        Debug.Log("Funcionando");
                         interact = false;
                     }
                 }
@@ -124,7 +131,17 @@ public class PlayerInteractable : MonoBehaviour
         {
             interact = false;
         }
+    }
 
-
+    void SetKeyPad(bool keyInteract)
+    {
+        if(keyInteract)
+        {
+            interactKeypad = true;
+        }
+        else
+        {
+            interactKeypad = false;
+        }
     }
 }

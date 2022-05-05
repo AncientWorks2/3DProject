@@ -127,7 +127,13 @@ public class DoorController : InteractManager
 
     public override string GetDescription()
     {
-        if (isOpen) return " Press [E] to close the door";
-        return "Press [E] to open the door";
+        if (lockedByPassword) { return "Locked by Password"; }
+
+        else
+        {
+            if (isOpen) return " Press [E] to close the door";
+            return "Press [E] to open the door";
+        }
+        
     }
 }
