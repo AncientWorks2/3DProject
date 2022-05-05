@@ -55,11 +55,7 @@ public class PlayerInteractable : MonoBehaviour
                 interactionHoldGO.SetActive(interactable.interactionType == InteractManager.InteractionType.Hold);
             }
 
-            
-
-        }
-        
-        float distance = Vector3.Distance(transform.position, hit.transform.position);
+            float distance = Vector3.Distance(transform.position, hit.transform.position);
             if (distance <= 3f)
             {
                 if (interactKeypad)
@@ -71,6 +67,10 @@ public class PlayerInteractable : MonoBehaviour
 
                 }
             }
+
+        }
+        
+        
 
         
 

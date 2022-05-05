@@ -10,12 +10,13 @@ public class LoadSceneParts : MonoBehaviour
 
     private bool isLoaded;
     private bool shouldLoad;
+
     void Start()
     {
         //Verify if the scene is already open
         if (SceneManager.sceneCount > 0)
         {
-            for (int i = 0; i < SceneManager.sceneCount; ++i)
+            for (int i = 0; i < SceneManager.sceneCount; i++)
             {
                 Scene scene = SceneManager.GetSceneAt(i);
                 if (scene.name == gameObject.name)

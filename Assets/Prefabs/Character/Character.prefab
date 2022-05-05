@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81262681385717783}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.008098, y: 0.5479, z: 0.0801}
+  m_LocalPosition: {x: 0.008098, y: 0.5479, z: 0.0383}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1498101681}
@@ -155,7 +155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134637447711795511}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0101, y: 0.5485, z: 0.0848}
+  m_LocalPosition: {x: 0.0101, y: 0.5485, z: 0.0431}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2408384430456721365}
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521781311489137210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0738, y: 0.3551, z: 0.1192}
+  m_LocalPosition: {x: 0.0738, y: 0.3551, z: 0.099}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2408384430456721365}
@@ -948,7 +948,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: e79fa7430e25a1c4b8a62d6744efb027, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.08361544
+  m_Radius: 0.15
   m_Height: 0.6488736
   m_Direction: 1
   m_Center: {x: 0, y: 0.3222601, z: 0}
@@ -1005,17 +1005,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211c7a7d204696d4cb0db494ad3246ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  withoutStaminaSpeed: 5
-  crouchSpeed: 5
-  runSpeed: 15
-  jumpForce: 5
-  crouchJumpForce: 2.5
-  withoutStaminaJumpForce: 2
-  sensitivity: 100
+  speed: 7
+  withoutStaminaSpeed: 2.5
+  crouchSpeed: 4.5
+  runSpeed: 12
+  jumpForce: 2.5
+  crouchJumpForce: 1.5
+  withoutStaminaJumpForce: 1
+  sensitivity: 50
   gravity: 9.81
   cam: {fileID: 81262681385717783}
-  maxCamVerRot: 0.55
+  maxCamVerRot: 0.4
   CameraPositions:
   - {fileID: 134637447711795511}
   - {fileID: 521781311489137210}
