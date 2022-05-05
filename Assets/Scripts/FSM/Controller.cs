@@ -21,6 +21,7 @@ namespace FSM
         private CharacterEngine _charEng;
         private FieldOfView _fieldView;
         private EnemyWarriorNavigation _enNav;
+        private ButtonController _buttContr;
 
         private void Awake()
         {
@@ -29,6 +30,7 @@ namespace FSM
             _charEng = GetComponent<CharacterEngine>();
             _fieldView = GetComponent<FieldOfView>();
             _enNav = GetComponent<EnemyWarriorNavigation>();
+            _buttContr = GetComponent<ButtonController>();
         }
 
         void Update()
@@ -92,6 +94,12 @@ namespace FSM
         public bool ReturnPatroling()
         {
             return _enNav.ReturnPatrol();
+        }
+
+
+        public bool ReturnOn()
+        {
+            return _buttContr.ReturnInOn();
         }
     }
 }
