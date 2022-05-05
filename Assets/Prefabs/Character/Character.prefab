@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cafc258c857ea4a8a409e9aa7e88ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpRange: 5
+  pickUpRange: 10
   moveForce: 200
   holdObjectParent: {fileID: 1498101681}
   throwSpeed: 1000

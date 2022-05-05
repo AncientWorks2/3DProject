@@ -328,9 +328,9 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Context\GraphContextExtensionProvider.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\ReorderableList\GenericListAdaptor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Exceptions\UnityEditorInternalException.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Analysis\IAnalysis.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Plugin\Changelogs\LegacyLudiqGraphs\Changelog_1_4_0.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Inspection\Special\ListInspector.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Analysis\IAnalysis.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\ReorderableList\ElementAdderMenu\ElementAdderMenuBuilder.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\ReorderableList\Internal\GUIHelper.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Plugin\Changelogs\LegacyLudiqGraphs\Changelog_1_0_0.cs" />
