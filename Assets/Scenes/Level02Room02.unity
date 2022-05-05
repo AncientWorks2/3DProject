@@ -11683,9 +11683,9 @@ MonoBehaviour:
   objects: []
   ramp: []
   scale: 0.5
-  dotScale: 2
+  dotScale: 3
   cameraOffset: {x: 0, y: 0, z: 0}
-  floorOffset: {x: 0, y: 0, z: 0}
+  floorOffset: {x: 6, y: 4.5, z: 0}
   wallVerOffset: {x: 0, y: -1.23, z: 0}
   wallHorOffset: {x: -1.23, y: 0, z: 0}
   minimapPos: {fileID: 2082904311}

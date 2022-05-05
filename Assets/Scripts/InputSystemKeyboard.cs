@@ -10,6 +10,8 @@ public class InputSystemKeyboard : MonoBehaviour
     public float axVer { get; private set; } //Vertical axis keyboard
     public float moHor { get; private set; } //Horizontal axis mouse
     public float moVer { get; private set; } //Vertical axis mouse
+    public float mousePosX { get; private set; } //X position mouse
+    public float mousePosY { get; private set; } //Y position mouse
 
 
     public event Action OnPause = delegate { };
@@ -20,6 +22,8 @@ public class InputSystemKeyboard : MonoBehaviour
     //Objects
     public event Action<bool> OnPick = delegate { };
     public event Action OnThrow = delegate { };
+    //Menu
+    public event Action OnEnter = delegate { };
 
     //KeyPad
     public event Action<bool> OnKeyPad = delegate { };
@@ -37,7 +41,14 @@ public class InputSystemKeyboard : MonoBehaviour
         //Mouse
         moHor = Input.GetAxisRaw("Mouse X");
         moVer = Input.GetAxisRaw("Mouse Y");
+        //Mouse position (to menu dinamic image)
+        mousePosX = Input.mousePosition.x;
+        mousePosY = Input.mousePosition.y;
 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            OnEnter();
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

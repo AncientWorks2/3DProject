@@ -12,11 +12,20 @@ public class PlatformEngine : MonoBehaviour
     private float waitTime;
     [SerializeField]
     private float distance;
+    [SerializeField]
+    private GameObject button;
 
     private float startWaitTime;
     private int platformToMove;
 
     public bool palanca;
+
+    private PlatformController _platformContr;
+
+    private void Awake()
+    {
+        _platformContr = button.GetComponent<PlatformController>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +36,8 @@ public class PlatformEngine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        palanca = _platformContr.ReturnInOn();
+
         transform.position = Vector3.MoveTowards(transform.position, platPositions[platformToMove].position, speed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, platPositions[platformToMove].position) < distance)

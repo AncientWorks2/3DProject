@@ -48,8 +48,6 @@ public class ButtonController : InteractManager
         {
             light.color = Color.red;
         }
-
-        Debug.Log(isOn);
     }
 
     private void UpdateButtonColor()
