@@ -19,7 +19,7 @@ public class MusicController : MonoBehaviour
         PlayerPrefs.SetFloat("musicVolume", sliderValue);
         sValue = PlayerPrefs.GetFloat("musicVolume");
 
-        mixer.SetFloat("MusicVolume", Mathf.Log10(sValue) * 20);
+        mixer.SetFloat("MusicVol", Mathf.Log10(sValue) * 20);
     }
 
     public void Update()

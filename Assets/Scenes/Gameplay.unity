@@ -609,7 +609,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1693169015}
   m_HandleRect: {fileID: 635884128}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
@@ -3518,7 +3518,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1072462857}
   m_HandleRect: {fileID: 1408909383}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
@@ -5345,6 +5345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126abf7e700982042ab1c52170f8095d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _fullScreenToggle: {fileID: 1024888543}
 --- !u!114 &1494434409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5370,6 +5371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15b91318dbaacf24a98c6a9cfbbf0c32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quality: {fileID: 495913983}
 --- !u!114 &1494434411
 MonoBehaviour:
   m_ObjectHideFlags: 0

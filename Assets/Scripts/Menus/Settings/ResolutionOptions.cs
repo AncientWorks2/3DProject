@@ -10,6 +10,8 @@ public class ResolutionOptions : MonoBehaviour
 
     public Dropdown resolutionDrop;
 
+    private int currentRes;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,7 @@ public class ResolutionOptions : MonoBehaviour
 
         List<string> options = new List<string>();
 
-        int currentRes = 0;
+        currentRes = 0;
 
         for (int i = 0; i < resolutions.Length; i++)
         {
@@ -31,18 +33,28 @@ public class ResolutionOptions : MonoBehaviour
                 && resolutions[i].height == Screen.currentResolution.height)
             {
                 currentRes = i;
+
+                PlayerPrefs.SetInt("resValue", currentRes);
             }
+
+            
         }
+
+        currentRes = PlayerPrefs.GetInt("resValue");
 
         resolutionDrop.AddOptions(options);
         resolutionDrop.value = currentRes;
         resolutionDrop.RefreshShownValue();
+
+        SetResolution(currentRes);
     }
 
     public void SetResolution(int resValue)
     {
         Resolution resolution = resolutions[resValue];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+
+        PlayerPrefs.SetInt("resValue", currentRes);
     }
 
     
