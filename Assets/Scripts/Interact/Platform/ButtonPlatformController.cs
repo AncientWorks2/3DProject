@@ -2,26 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonController : InteractManager
+public class ButtonPlatformController : InteractManager
 {
     [SerializeField]
     private Light light;
     [SerializeField]
     private int buttonNum;
-    [SerializeField]
-    private Material matOn;
-    [SerializeField]
-    private Material matOff;
 
     private bool isOn;
-
-    private MeshRenderer _renderer;
-
-    private void Awake()
-    {
-        _renderer = GetComponent<MeshRenderer>();
-
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +17,7 @@ public class ButtonController : InteractManager
 
         UpdateButton();
         UpdateLight();
-        UpdateButtonColor();
+        ButtonElection();
     }
 
     private void UpdateButton()
@@ -37,27 +25,35 @@ public class ButtonController : InteractManager
         isOn = !isOn;
     }
 
+    private void ButtonElection()
+    {
+        if (buttonNum == 1)
+        {
+            Level01Manager.button1 = isOn;
+        }
+        else if (buttonNum == 2)
+        {
+            Level01Manager.button2 = isOn;
+        }
+        else if (buttonNum == 3)
+        {
+            Level01Manager.button3 = isOn;
+        }
+        else if (buttonNum == 4)
+        {
+            Level01Manager.button4 = isOn;
+        }
+    }
+
     private void UpdateLight()
     {
         if (isOn)
         {
-            light.color = Color.green;
+            light.color = Color.white;
         }
         else
         {
-            light.color = Color.red;
-        }
-    }
-
-    private void UpdateButtonColor()
-    {
-        if (isOn)
-        {
-            _renderer.material = matOn;
-        }
-        else
-        {
-            _renderer.material = matOff;
+            light.color = Color.yellow;
         }
     }
 
@@ -65,11 +61,11 @@ public class ButtonController : InteractManager
     {
         if (isOn)
         {
-            return "Presiona [E] para desativar la garra";
+            return "Presiona [E] para desativar motor " + buttonNum + " de la plataforma";
         }
         else
         {
-            return "Presiona [E] para activar la garra";
+            return "Presiona [E] para activar motor " + buttonNum + " de la plataforma";
         }
     }
 
@@ -77,12 +73,6 @@ public class ButtonController : InteractManager
     {
         UpdateButton();
         UpdateLight();
-        UpdateButtonColor();
-    }   
-    
-
-    public bool ReturnInOn()
-    {
-        return isOn;
+        ButtonElection();
     }
 }

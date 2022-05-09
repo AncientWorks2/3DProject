@@ -38,33 +38,36 @@ public class PlatformEngine : MonoBehaviour
     {
         palanca = _platformContr.ReturnInOn();
 
-        transform.position = Vector3.MoveTowards(transform.position, platPositions[platformToMove].position, speed * Time.deltaTime);
-
-        if (Vector3.Distance(transform.position, platPositions[platformToMove].position) < distance)
+        if (Level01Manager.button1 && Level01Manager.button2 && Level01Manager.button3 && Level01Manager.button4)
         {
-            if (waitTime <= 0)
-            {
-                waitTime = startWaitTime;
+            transform.position = Vector3.MoveTowards(transform.position, platPositions[platformToMove].position, speed * Time.deltaTime);
 
-                if (platformToMove == 0)
+            if (Vector3.Distance(transform.position, platPositions[platformToMove].position) < distance)
+            {
+                if (waitTime <= 0)
                 {
-                    if (palanca)
+                    waitTime = startWaitTime;
+
+                    if (platformToMove == 0)
                     {
-                        platformToMove = 1;
+                        if (palanca)
+                        {
+                            platformToMove = 1;
+                        }
+                        else
+                        {
+                            platformToMove = 2;
+                        }
                     }
                     else
                     {
-                        platformToMove = 2;
+                        platformToMove = 0;
                     }
                 }
                 else
                 {
-                    platformToMove = 0;
+                    waitTime -= Time.deltaTime;
                 }
-            }
-            else
-            {
-                waitTime -= Time.deltaTime;
             }
         }
     }
