@@ -216,7 +216,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7299379766389085410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.186}
+  m_LocalPosition: {x: 0, y: 0, z: -0.111}
   m_LocalScale: {x: 0.0004, y: 0.0011, z: 1}
   m_Children:
   - {fileID: 4925364177863149670}
@@ -551,3 +551,5 @@ MonoBehaviour:
   buttonNum: 1
   matOn: {fileID: 2100000, guid: 24b8ca161ef890e40a467fab8f30dbe3, type: 2}
   matOff: {fileID: 2100000, guid: b755bc1b185a1d24d82fe6958fdd2980, type: 2}
+  passwordText: {fileID: 8905985563066263810}
+  numPassword: 0

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonController : InteractManager
 {
@@ -12,6 +13,10 @@ public class ButtonController : InteractManager
     private Material matOn;
     [SerializeField]
     private Material matOff;
+    [SerializeField]
+    private Text passwordText;
+    [SerializeField]
+    private int numPassword;
 
     private bool isOn;
 
@@ -30,6 +35,7 @@ public class ButtonController : InteractManager
         UpdateButton();
         UpdateLight();
         UpdateButtonColor();
+        UpdateText();
     }
 
     private void UpdateButton()
@@ -61,6 +67,18 @@ public class ButtonController : InteractManager
         }
     }
 
+    private void UpdateText()
+    {
+        if (isOn)
+        {
+            passwordText.text = numPassword.ToString();
+        }
+        else
+        {
+            passwordText.text = "";
+        }
+    }
+
     public override string GetDescription()
     {
         if (isOn)
@@ -78,6 +96,7 @@ public class ButtonController : InteractManager
         UpdateButton();
         UpdateLight();
         UpdateButtonColor();
+        UpdateText();
     }   
     
 
