@@ -83,11 +83,11 @@ public class ButtonController : InteractManager
     {
         if (isOn)
         {
-            return "Presiona [E] para desativar la garra";
+            return "Press [E] to desactivate the claw";
         }
         else
         {
-            return "Presiona [E] para activar la garra";
+            return "Press [E] to activate the claw";
         }
     }
 

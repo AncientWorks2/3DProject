@@ -14,12 +14,13 @@ GameObject:
   - component: {fileID: 2455417599033394556}
   - component: {fileID: 7874175200083856468}
   - component: {fileID: 521907326717010012}
+  - component: {fileID: 6726173153036790630}
   m_Layer: 8
   m_Name: MovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &2455417599033394497
 Transform:
@@ -131,4 +132,21 @@ MonoBehaviour:
   - {fileID: 0}
   waitTime: 3
   distance: 0.2
+  button: {fileID: 0}
   palanca: 0
+--- !u!208 &6726173153036790630
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2455417599033394557}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.5, y: 0.062000003, z: 1.5000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 1.5000001, y: 0.187, z: 1.5000001}
+  m_TimeToStationary: 0.5

@@ -61,11 +61,11 @@ public class ButtonPlatformController : InteractManager
     {
         if (isOn)
         {
-            return "Presiona [E] para desativar motor " + buttonNum + " de la plataforma";
+            return "Press [E] to desactive the engine " + buttonNum + " of the platforms";
         }
         else
         {
-            return "Presiona [E] para activar motor " + buttonNum + " de la plataforma";
+            return "Press [E] to activate the engine " + buttonNum + " of the platforms";
         }
     }
 
