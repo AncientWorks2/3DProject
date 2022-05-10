@@ -12,7 +12,9 @@ public class EnemyWarriorNavigation : MonoBehaviour
     [SerializeField]
     private float normalSpeed;
     [SerializeField]
-    private float runSpeed;    
+    private float runSpeed;
+    [SerializeField]
+    private float shockedSpeed;
 
     //Timer
     [SerializeField]
@@ -21,6 +23,8 @@ public class EnemyWarriorNavigation : MonoBehaviour
 
     private bool patrol;
     private bool guard;
+
+    public bool shocked;
 
     private FieldOfView _fieldView;
     private NavMeshAgent _navmesh;
@@ -43,7 +47,14 @@ public class EnemyWarriorNavigation : MonoBehaviour
     {
         if (_fieldView.ReturnSeePlayer())
         {
-            _navmesh.speed = runSpeed;
+            if (shocked)
+            {
+                _navmesh.speed = shockedSpeed;
+            }
+            else
+            {
+                _navmesh.speed = runSpeed;
+            }
 
             _navmesh.destination = _fieldView.ReturnTargetTransform().position;
 
