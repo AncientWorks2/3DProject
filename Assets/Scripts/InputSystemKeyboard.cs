@@ -19,6 +19,7 @@ public class InputSystemKeyboard : MonoBehaviour
     public event Action OnCrouch = delegate { };
     public event Action<bool> OnRun = delegate { };
     public event Action<bool> OnInteract = delegate { };
+    public event Action OnShock = delegate { };
     //Objects
     public event Action<bool> OnPick = delegate { };
     public event Action OnThrow = delegate { };
@@ -74,6 +75,11 @@ public class InputSystemKeyboard : MonoBehaviour
             OnRun(false);
         }
 
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            OnShock();
+        }
+
         //InteractButton
         if (Input.GetKeyDown(KeyCode.E)) { OnInteract(true); }
         else { OnInteract(false); }
@@ -90,16 +96,6 @@ public class InputSystemKeyboard : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             OnInvencible();
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            SceneManager.LoadScene("Level1Scene");
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SceneManager.LoadScene("Level2Scene");
         }
     }
 

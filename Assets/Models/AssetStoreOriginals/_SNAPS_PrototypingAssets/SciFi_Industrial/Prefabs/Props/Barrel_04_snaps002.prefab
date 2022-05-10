@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33672419907569566}
   - component: {fileID: 23272670588199518}
   - component: {fileID: 5863696861079218758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel_04_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33378804869941240}
   - component: {fileID: 23595473448121536}
   - component: {fileID: 64567851133926672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TurbineCover_03_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

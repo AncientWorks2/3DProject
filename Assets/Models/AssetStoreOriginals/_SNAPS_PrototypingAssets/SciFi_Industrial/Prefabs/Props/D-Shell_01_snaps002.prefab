@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33403296513641652}
   - component: {fileID: 23624868853823458}
   - component: {fileID: 64829603329564944}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: D-Shell_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

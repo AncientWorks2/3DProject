@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33476076607005042}
   - component: {fileID: 23668096157217950}
   - component: {fileID: 1588299668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GreeblePanelBeveled_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

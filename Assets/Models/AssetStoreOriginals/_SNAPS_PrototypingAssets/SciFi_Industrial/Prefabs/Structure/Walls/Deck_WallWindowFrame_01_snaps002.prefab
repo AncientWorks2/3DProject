@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33924010398020952}
   - component: {fileID: 23973639603928966}
   - component: {fileID: 5090055881201369011}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deck_WallWindowFrame_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

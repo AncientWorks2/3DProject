@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33796178955029886}
   - component: {fileID: 23573653241444890}
   - component: {fileID: 12733501}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FrameBoxBeveled_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

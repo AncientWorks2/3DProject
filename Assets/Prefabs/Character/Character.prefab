@@ -861,6 +861,7 @@ GameObject:
   - component: {fileID: 2999346489705563007}
   - component: {fileID: 5033098396589161744}
   - component: {fileID: 3095408196694973176}
+  - component: {fileID: 2857665255824292887}
   - component: {fileID: 7634524903566274417}
   - component: {fileID: 1250874915652128894}
   m_Layer: 6
@@ -1055,6 +1056,28 @@ MonoBehaviour:
   health: 150
   maxHealth: 150
   INVENCIBLE: 0
+--- !u!114 &2857665255824292887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037568330379826543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2744e36f8490f440bcae2f00b93a4c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 5
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 256
+  speedShock: 1.5
+  shockTime: 3
+  waitTime: 6
+  loadShock: {fileID: 0}
+  shock: 0
+  activeShock: 0
 --- !u!114 &7634524903566274417
 MonoBehaviour:
   m_ObjectHideFlags: 0

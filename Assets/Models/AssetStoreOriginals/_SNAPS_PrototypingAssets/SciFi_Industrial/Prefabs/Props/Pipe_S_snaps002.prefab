@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33235888535519450}
   - component: {fileID: 23079967783323304}
   - component: {fileID: 64509248946665018}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pipe_S_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

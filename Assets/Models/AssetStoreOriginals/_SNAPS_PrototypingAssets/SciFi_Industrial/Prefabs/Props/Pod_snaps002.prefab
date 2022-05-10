@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33582160114033570}
   - component: {fileID: 23632396559099166}
   - component: {fileID: 64576849206831376}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pod_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

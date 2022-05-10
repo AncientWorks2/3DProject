@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33756843281837812}
   - component: {fileID: 23860532793681116}
   - component: {fileID: 2734880705344506042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Quart_Ceiling_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23486310792794668}
   - component: {fileID: 4066485998840908341}
   - component: {fileID: 649789435}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deck_Door_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

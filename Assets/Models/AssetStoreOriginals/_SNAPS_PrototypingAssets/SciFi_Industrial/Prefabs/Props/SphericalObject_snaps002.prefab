@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33741070140945870}
   - component: {fileID: 23397664346961876}
   - component: {fileID: 64318303044979784}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SphericalObject_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

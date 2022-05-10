@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33019569086357906}
   - component: {fileID: 23062723186836528}
   - component: {fileID: 64636662752195550}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bolton_M_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

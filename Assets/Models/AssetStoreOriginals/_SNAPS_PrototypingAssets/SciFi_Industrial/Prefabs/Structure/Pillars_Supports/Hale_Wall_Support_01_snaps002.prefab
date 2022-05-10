@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33374305516590984}
   - component: {fileID: 23825814236212206}
   - component: {fileID: 5840049817927732343}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hale_Wall_Support_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

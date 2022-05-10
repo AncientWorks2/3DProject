@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33587655081140584}
   - component: {fileID: 23285496521217898}
   - component: {fileID: 1437324338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GrillMid_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

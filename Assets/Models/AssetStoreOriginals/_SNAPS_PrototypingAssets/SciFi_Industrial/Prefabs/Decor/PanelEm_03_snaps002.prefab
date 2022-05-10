@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33468327577258548}
   - component: {fileID: 23723261294403060}
   - component: {fileID: 2058705663}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PanelEm_03_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

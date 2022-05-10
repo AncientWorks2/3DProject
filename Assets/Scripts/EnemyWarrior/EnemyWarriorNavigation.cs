@@ -12,9 +12,7 @@ public class EnemyWarriorNavigation : MonoBehaviour
     [SerializeField]
     private float normalSpeed;
     [SerializeField]
-    private float runSpeed;
-    [SerializeField]
-    private float shockedSpeed;
+    private float runSpeed;    
 
     //Timer
     [SerializeField]
@@ -24,7 +22,11 @@ public class EnemyWarriorNavigation : MonoBehaviour
     private bool patrol;
     private bool guard;
 
+    //Shock
     public bool shocked;
+    public float timeShocked;
+    public float shockedSpeed;
+    private float startShockedTime;
 
     private FieldOfView _fieldView;
     private NavMeshAgent _navmesh;
@@ -38,8 +40,9 @@ public class EnemyWarriorNavigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         startWaitTime = waitTime;
+
+        startShockedTime = timeShocked;
     }
 
     // Update is called once per frame
@@ -50,6 +53,20 @@ public class EnemyWarriorNavigation : MonoBehaviour
             if (shocked)
             {
                 _navmesh.speed = shockedSpeed;
+
+                if (timeShocked <= 0)
+                {
+                    timeShocked = startShockedTime;
+
+                    shocked = false;
+                }
+                else
+                {
+                    timeShocked -= Time.deltaTime;
+                }
+
+                Debug.Log(gameObject.name + " " + shocked);
+                
             }
             else
             {

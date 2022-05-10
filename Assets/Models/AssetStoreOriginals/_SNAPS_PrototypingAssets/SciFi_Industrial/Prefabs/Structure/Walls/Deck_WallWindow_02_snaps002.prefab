@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33956392326377634}
   - component: {fileID: 23965089399209698}
   - component: {fileID: 5012493352542755058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deck_WallWindow_02_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707011455882000}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 6692c8743d084df44bf0fe809e80bd80, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2

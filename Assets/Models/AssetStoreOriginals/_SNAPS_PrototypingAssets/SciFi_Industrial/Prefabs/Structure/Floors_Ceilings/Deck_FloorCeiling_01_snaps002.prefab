@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33626532004108466}
   - component: {fileID: 23434847006468676}
   - component: {fileID: 65366433573631306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Deck_FloorCeiling_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

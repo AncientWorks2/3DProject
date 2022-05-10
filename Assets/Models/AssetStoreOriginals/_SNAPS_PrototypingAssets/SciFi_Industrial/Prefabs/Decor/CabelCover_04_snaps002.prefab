@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33718755759423716}
   - component: {fileID: 23327465566980644}
   - component: {fileID: 64245861018245638}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CabelCover_04_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

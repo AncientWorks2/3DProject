@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33028826617234914}
   - component: {fileID: 23583749588929480}
   - component: {fileID: 64320943188418982}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hale_Wall_02_Corner_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33685643780110762}
   - component: {fileID: 23611595677381468}
   - component: {fileID: 4995465423132858036}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Generator_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 360679038407688217}
   - component: {fileID: 2113259116026130652}
   - component: {fileID: 4541292334839848480}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Generator_01_engine_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33795108818916934}
   - component: {fileID: 23439700802600548}
   - component: {fileID: 108274564}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PistonClamp_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

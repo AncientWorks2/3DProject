@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33040700654805710}
   - component: {fileID: 23892896761645040}
   - component: {fileID: 64333683885339614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall_Support_Big_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

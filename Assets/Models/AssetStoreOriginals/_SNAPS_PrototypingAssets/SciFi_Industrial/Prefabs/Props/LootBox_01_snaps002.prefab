@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33651627878645314}
   - component: {fileID: 23836544643853446}
   - component: {fileID: 456933990289161773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LootBox_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

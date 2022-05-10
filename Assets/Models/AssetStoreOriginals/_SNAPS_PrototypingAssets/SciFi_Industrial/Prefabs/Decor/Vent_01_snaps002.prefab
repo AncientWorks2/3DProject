@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33262692974666128}
   - component: {fileID: 23860218872650032}
   - component: {fileID: 4838827350968584545}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Vent_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

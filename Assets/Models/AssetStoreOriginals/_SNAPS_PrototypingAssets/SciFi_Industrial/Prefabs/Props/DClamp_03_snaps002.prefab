@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33955132303167814}
   - component: {fileID: 23395787428539094}
   - component: {fileID: 7275459197323324260}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DClamp_03_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33829438399412762}
   - component: {fileID: 23818447841624278}
   - component: {fileID: 2549051988102581787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gale_Pillar_02_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

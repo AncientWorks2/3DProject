@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33746709791892598}
   - component: {fileID: 23590302318087502}
   - component: {fileID: 64124733754007268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Quart_Wall_Corner_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

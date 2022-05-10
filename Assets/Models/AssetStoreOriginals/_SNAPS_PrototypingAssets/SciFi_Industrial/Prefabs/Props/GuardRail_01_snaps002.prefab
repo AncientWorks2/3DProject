@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33959880119431890}
   - component: {fileID: 23845424831015320}
   - component: {fileID: 2175298935676645548}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GuardRail_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

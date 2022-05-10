@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33503550048378038}
   - component: {fileID: 23874358329844750}
   - component: {fileID: 7706990231861134731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gen_Door_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

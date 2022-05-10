@@ -1242,6 +1242,9 @@ MonoBehaviour:
   normalSpeed: 2.5
   runSpeed: 3.5
   waitTime: 3
+  shocked: 0
+  timeShocked: 0
+  shockedSpeed: 0
 --- !u!114 &4346049947716105986
 MonoBehaviour:
   m_ObjectHideFlags: 0

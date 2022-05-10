@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33619900665468090}
   - component: {fileID: 23024959216973206}
   - component: {fileID: 1867941148}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CrossBarBox_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33343768786767430}
   - component: {fileID: 23542784673215506}
   - component: {fileID: 65033202795395774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gen_FloorCeiling_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33948546423011400}
   - component: {fileID: 23690413366494096}
   - component: {fileID: 65106936245990294}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Gen_Floor_03_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

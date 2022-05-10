@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33951880170709448}
   - component: {fileID: 23414209626849176}
   - component: {fileID: 595634155}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CapShock_M_01_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

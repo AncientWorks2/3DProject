@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33766167318191240}
   - component: {fileID: 23958819864187280}
   - component: {fileID: 4258138852953690310}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: VerticalStrat_01_Base_snaps002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
