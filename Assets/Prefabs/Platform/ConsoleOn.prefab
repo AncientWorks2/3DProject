@@ -106,6 +106,8 @@ GameObject:
   - component: {fileID: 3765135481370429510}
   - component: {fileID: 3814725310517622522}
   - component: {fileID: 670925501887445800}
+  - component: {fileID: 8301492061461085305}
+  - component: {fileID: 2979881792072453161}
   m_Layer: 0
   m_Name: ConsoleOn
   m_TagString: Untagged
@@ -208,3 +210,28 @@ MonoBehaviour:
   interactionType: 0
   light: {fileID: 6911616854461307871}
   buttonNum: 0
+--- !u!114 &8301492061461085305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753607808746984278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa67b404f69d04246ae77f5af85aa09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particle: {fileID: 0}
+--- !u!114 &2979881792072453161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753607808746984278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb2a87f07d468040a4f0115c8553d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ButtonPlatformController : InteractManager
 {
@@ -8,6 +9,8 @@ public class ButtonPlatformController : InteractManager
     private Light light;
     [SerializeField]
     private int buttonNum;
+
+    public event Action<bool> OnIsOn = delegate { };
 
     private bool isOn;
     // Start is called before the first frame update
@@ -23,6 +26,8 @@ public class ButtonPlatformController : InteractManager
     private void UpdateButton()
     {
         isOn = !isOn;
+
+        OnIsOn(isOn);
     }
 
     private void ButtonElection()

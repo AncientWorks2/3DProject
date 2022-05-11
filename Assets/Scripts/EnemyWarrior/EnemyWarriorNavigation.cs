@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System;
 
 public class EnemyWarriorNavigation : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class EnemyWarriorNavigation : MonoBehaviour
 
     private FieldOfView _fieldView;
     private NavMeshAgent _navmesh;
+
+    public event Action<bool> OnWalk = delegate { };
 
     private void Awake()
     {
@@ -63,10 +66,7 @@ public class EnemyWarriorNavigation : MonoBehaviour
                 else
                 {
                     timeShocked -= Time.deltaTime;
-                }
-
-                Debug.Log(gameObject.name + " " + shocked);
-                
+                }                
             }
             else
             {
@@ -95,7 +95,9 @@ public class EnemyWarriorNavigation : MonoBehaviour
             else
             {
                 waitTime -= Time.deltaTime;
-            }            
+            }
+            
+            OnWalk(true);
         }
         else
         {

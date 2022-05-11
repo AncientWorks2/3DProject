@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EnemyWarriorShootingSystem : ShootingSystem
 {
@@ -22,6 +23,7 @@ public class EnemyWarriorShootingSystem : ShootingSystem
     private FieldOfView _fieldView;
     private CharacterHealthSystem _charHealth;
 
+    public event Action<bool> OnShot = delegate { };
 
     // Start is called before the first frame update
     void Start()
@@ -71,11 +73,13 @@ public class EnemyWarriorShootingSystem : ShootingSystem
                     //Draw line on the range we shoot
                     _lineRend.SetPosition(1, shotPoint[0].position + (transform.forward * raycastRange));
                 }
+
+                OnShot(true);
             }
             else
             {
                 waitTime -= Time.deltaTime;
-            }        
+            }
         }
     }
 

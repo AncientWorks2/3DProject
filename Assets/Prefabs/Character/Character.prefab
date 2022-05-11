@@ -855,6 +855,7 @@ GameObject:
   - component: {fileID: 7652995493819804492}
   - component: {fileID: 5698119796964445169}
   - component: {fileID: 7117804890648519331}
+  - component: {fileID: 6939166313968581559}
   - component: {fileID: 5058267149441821473}
   - component: {fileID: 8068935953849117362}
   - component: {fileID: 2923939039851053894}
@@ -953,6 +954,14 @@ CapsuleCollider:
   m_Height: 0.6488736
   m_Direction: 1
   m_Center: {x: 0, y: 0.3222601, z: 0}
+--- !u!81 &6939166313968581559
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037568330379826543}
+  m_Enabled: 1
 --- !u!114 &5058267149441821473
 MonoBehaviour:
   m_ObjectHideFlags: 0
