@@ -22,6 +22,7 @@ public class Minimap : MonoBehaviour
     public Transform[] wall;
     public Transform[] objects;
     public Transform[] ramp;
+    public Transform[] platforms;
 
     public float scale = 0.5f;
     public float dotScale = 2.0f;
@@ -30,6 +31,7 @@ public class Minimap : MonoBehaviour
     public Vector3 floorOffset;
     public Vector3 wallVerOffset;
     public Vector3 wallHorOffset;
+    public Vector3 platformOffset;
     public Transform minimapPos;
     public float cameraDistance;
 
@@ -152,11 +154,24 @@ public class Minimap : MonoBehaviour
              Vector3 rampC = minimapPos.InverseTransformPoint(rampW);
 
             Matrix4x4 rampMatrix = minimapPos.localToWorldMatrix * Matrix4x4.Translate(cameraOffset) *
-                                    Matrix4x4.Scale(Vector3.one * scale) * Matrix4x4.Translate(new Vector3(rampC.x, rampC.z, 1.3f)) *
+                                    Matrix4x4.Scale(Vector3.one * scale) * Matrix4x4.Translate(new Vector3(rampC.x, rampC.z, 1.1f)) *
                                     Matrix4x4.Scale(Vector3.one * dotScale);
 
              Graphics.DrawMesh(model, rampMatrix, rampMaterial, 0);
          }
+
+        //Platforms
+        for (int i = 0; i < platforms.Length; i++)
+        {
+            Vector3 platformW = platforms[i].position;
+            Vector3 platformC = minimapPos.InverseTransformPoint(platformW);
+
+            Matrix4x4 platformMatrix = minimapPos.localToWorldMatrix * Matrix4x4.Translate(cameraOffset) *
+                                        Matrix4x4.Scale(Vector3.one * scale) * Matrix4x4.Translate(new Vector3(platformC.x + platformOffset.x, platformC.z + platformOffset.y, 1.1f)) *
+                                        Matrix4x4.Scale(Vector3.one * dotScale);
+
+            Graphics.DrawMesh(model, platformMatrix, rampMaterial, 0);
+        }
 
          
     }
