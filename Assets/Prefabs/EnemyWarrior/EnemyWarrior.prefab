@@ -993,7 +993,8 @@ GameObject:
   - component: {fileID: 3178396504599239709}
   - component: {fileID: 4346049947716105986}
   - component: {fileID: 4780153457517983653}
-  - component: {fileID: 3204006005855289331}
+  - component: {fileID: 8505827115174697234}
+  - component: {fileID: 4957895003966468997}
   m_Layer: 0
   m_Name: EnemyWarrior
   m_TagString: Untagged
@@ -1294,7 +1295,7 @@ MonoBehaviour:
     m_Bits: 183
   raycastRange: 20
   waitTime: 1.5
---- !u!114 &3204006005855289331
+--- !u!114 &8505827115174697234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1303,11 +1304,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 786267102538914883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfbb90a813a77cd49a81727a0010958a, type: 3}
+  m_Script: {fileID: 11500000, guid: a38fa1f6d2317944c80061e8d625998b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotSound: {fileID: 506430002576808745}
-  walkSound: {fileID: 7412223832579108229}
+  audioSource: {fileID: 7412223832579108229}
+--- !u!114 &4957895003966468997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786267102538914883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f020d39921f688b458bb433ff0b6a877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 0d85c6a5577f92b4eac0db5b307d711c, type: 3}
+  soundSource: {fileID: 506430002576808745}
 --- !u!1 &786267102538914885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,7 +2971,7 @@ GameObject:
   - component: {fileID: 8433416184279272177}
   - component: {fileID: 506430002576808745}
   m_Layer: 0
-  m_Name: ShotAudioSource
+  m_Name: ShotSoundSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2987,7 +3001,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: ec371caaf6232674e9ea1d45444f3320, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0d85c6a5577f92b4eac0db5b307d711c, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2998,7 +3012,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15.662564
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -3125,7 +3139,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 15.424314
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

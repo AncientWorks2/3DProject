@@ -57,7 +57,7 @@ public class KeypadController : MonoBehaviour
         {
             door.lockedByPassword = false;
 
-            if (audioSource != null);
+            if (audioSource != null)
                 audioSource.PlayOneShot(correctSound);
 
             passwordText.color = Color.green;

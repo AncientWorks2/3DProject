@@ -23,7 +23,7 @@ public class EnemyWarriorShootingSystem : ShootingSystem
     private FieldOfView _fieldView;
     private CharacterHealthSystem _charHealth;
 
-    public event Action<bool> OnShot = delegate { };
+    public event Action OnShot = delegate { };
 
     // Start is called before the first frame update
     void Start()
@@ -74,7 +74,7 @@ public class EnemyWarriorShootingSystem : ShootingSystem
                     _lineRend.SetPosition(1, shotPoint[0].position + (transform.forward * raycastRange));
                 }
 
-                OnShot(true);
+                OnShot();
             }
             else
             {

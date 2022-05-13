@@ -9356,6 +9356,10 @@ PrefabInstance:
       propertyPath: audio
       value: 
       objectReference: {fileID: 765987820}
+    - target: {fileID: 2979881792072453161, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 765987820}
     - target: {fileID: 3747877672947709298, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -11883,6 +11887,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979881792072453161, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
       propertyPath: audio
+      value: 
+      objectReference: {fileID: 759975237}
+    - target: {fileID: 2979881792072453161, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
+      propertyPath: audioSource
       value: 
       objectReference: {fileID: 759975237}
     - target: {fileID: 3747877672947709298, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
@@ -21966,6 +21974,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979881792072453161, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
       propertyPath: audio
+      value: 
+      objectReference: {fileID: 1060595406}
+    - target: {fileID: 2979881792072453161, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
+      propertyPath: audioSource
       value: 
       objectReference: {fileID: 1060595406}
     - target: {fileID: 3747877672947709298, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
@@ -55547,6 +55559,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2979881792072453161, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
       propertyPath: audio
+      value: 
+      objectReference: {fileID: 146067006}
+    - target: {fileID: 2979881792072453161, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
+      propertyPath: audioSource
       value: 
       objectReference: {fileID: 146067006}
     - target: {fileID: 3747877672947709298, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}

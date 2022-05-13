@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ButtonController : InteractManager
 {
@@ -22,6 +23,8 @@ public class ButtonController : InteractManager
 
     private MeshRenderer _renderer;
 
+    public event Action OnIsOn = delegate { };
+
     private void Awake()
     {
         _renderer = GetComponent<MeshRenderer>();
@@ -41,6 +44,8 @@ public class ButtonController : InteractManager
     private void UpdateButton()
     {
         isOn = !isOn;
+
+        OnIsOn();
     }
 
     private void UpdateLight()
