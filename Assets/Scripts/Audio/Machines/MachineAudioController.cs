@@ -2,15 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioControllerConsole : MonoBehaviour
+public class MachineAudioController : AudioControllerSystem
 {
-    [SerializeField]
-    private AudioSource audioSource;
-    [SerializeField]
-    private AudioClip sound;
-    [SerializeField]
-    private AudioSource soundSource;
-
     private ButtonPlatformController _buttPlat;
 
     private void Awake()
@@ -21,7 +14,6 @@ public class AudioControllerConsole : MonoBehaviour
     private void OnEnable()
     {
         _buttPlat.OnIsOn += SetAudio;
-        _buttPlat.OnIsOn += SetSound;
     }
     private void OnDisable()
     {
@@ -31,10 +23,10 @@ public class AudioControllerConsole : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
-    private void SetAudio(bool action)
+    public override void SetAudio(bool action)
     {
         if (action)
         {
@@ -47,10 +39,5 @@ public class AudioControllerConsole : MonoBehaviour
         {
             audioSource.Stop();
         }
-    }
-
-    private void SetSound(bool action)
-    {
-        soundSource.PlayOneShot(sound);
     }
 }

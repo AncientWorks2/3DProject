@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2695772817075459561}
   - component: {fileID: 3172175944449117278}
   m_Layer: 0
-  m_Name: AudioSourceConsole
+  m_Name: SoundSourceConsole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -234,7 +234,8 @@ GameObject:
   - component: {fileID: 3814725310517622522}
   - component: {fileID: 670925501887445800}
   - component: {fileID: 8301492061461085305}
-  - component: {fileID: 2979881792072453161}
+  - component: {fileID: 8013583623139810445}
+  - component: {fileID: 6709293163829498815}
   m_Layer: 0
   m_Name: ConsoleOn
   m_TagString: Untagged
@@ -351,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particle: {fileID: 0}
---- !u!114 &2979881792072453161
+--- !u!114 &8013583623139810445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,9 +361,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 3753607808746984278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb2a87f07d468040a4f0115c8553d2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ae33e9ed036db04c8730580e93208ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: 2d68bc61cec38bf4fbe9781bee819ef7, type: 3}
+  soundSource: {fileID: 3172175944449117278}
+--- !u!114 &6709293163829498815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753607808746984278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1d8732218b1174496c3335a279ced0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  sound: {fileID: 8300000, guid: 2d68bc61cec38bf4fbe9781bee819ef7, type: 3}
-  soundSource: {fileID: 3172175944449117278}

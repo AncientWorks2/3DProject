@@ -9408,6 +9408,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConsoleOn
       objectReference: {fileID: 0}
+    - target: {fileID: 6709293163829498815, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 765987820}
     - target: {fileID: 8301492061461085305, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
       propertyPath: particle
       value: 
@@ -11941,6 +11945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConsoleOn
       objectReference: {fileID: 0}
+    - target: {fileID: 6709293163829498815, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 759975237}
     - target: {fileID: 8301492061461085305, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
       propertyPath: particle
       value: 
@@ -22028,6 +22036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConsoleOn
       objectReference: {fileID: 0}
+    - target: {fileID: 6709293163829498815, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1060595406}
     - target: {fileID: 8301492061461085305, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
       propertyPath: particle
       value: 
@@ -55613,6 +55625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConsoleOn
       objectReference: {fileID: 0}
+    - target: {fileID: 6709293163829498815, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 146067006}
     - target: {fileID: 8301492061461085305, guid: a60747a196a80a74aa4f4b3a31e31f45, type: 3}
       propertyPath: particle
       value: 

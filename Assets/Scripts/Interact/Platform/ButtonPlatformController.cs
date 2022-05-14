@@ -11,6 +11,7 @@ public class ButtonPlatformController : InteractManager
     private int buttonNum;
 
     public event Action<bool> OnIsOn = delegate { };
+    public event Action OnIsOnConsole = delegate { };
 
     private bool isOn;
     // Start is called before the first frame update
@@ -28,6 +29,8 @@ public class ButtonPlatformController : InteractManager
         isOn = !isOn;
 
         OnIsOn(isOn);
+
+        OnIsOnConsole();
     }
 
     private void ButtonElection()

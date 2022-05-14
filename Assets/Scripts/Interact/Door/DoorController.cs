@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using System;
 
 public class DoorController : InteractManager
 {
@@ -23,6 +24,8 @@ public class DoorController : InteractManager
     private Vector3 startTargetPosition;
     [SerializeField] private Transform endDoor;
     private bool isOpeningSlide;
+
+    public event Action OnInteract = delegate { };
 
     public enum DisplayCategory
     {
@@ -123,6 +126,8 @@ public class DoorController : InteractManager
     public override void Interact()
     {
         ToggleDoorRotate(player.position);
+
+        OnInteract();
     }
 
     public override string GetDescription()
