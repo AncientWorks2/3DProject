@@ -832,6 +832,7 @@ GameObject:
   - component: {fileID: 499062452}
   - component: {fileID: 499062451}
   - component: {fileID: 499062450}
+  - component: {fileID: 499062453}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -861,7 +862,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 30d96c2d1b2f06540be2853569e00e72, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0b7b5c4bbddc49a449d3bce3f5dc30b9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 60216aa74e0799e4a87967fe0c017d9e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -961,6 +962,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499062453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499062449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061769ab06b7b8b4cbc977ce47683ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  presentationSceneName: Presentation
+  mainMenuSceneName: SceneMainMenu
 --- !u!1 &504510524
 GameObject:
   m_ObjectHideFlags: 0

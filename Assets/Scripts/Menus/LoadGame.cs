@@ -25,8 +25,8 @@ public class LoadGame : MonoBehaviour
         menuUI.SetActive(false);
         loadingUI.SetActive(true);
 
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay"));
-        //scenesToLoad.Add(SceneManager.LoadSceneAsync("Level01Room01", LoadSceneMode.Additive));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync("CinematicScene"));
+        //scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Additive));
 
         StartCoroutine(LoadingScreen());
     }

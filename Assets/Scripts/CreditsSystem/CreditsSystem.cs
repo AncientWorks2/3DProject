@@ -35,8 +35,6 @@ public class CreditsSystem : MonoBehaviour
     {
         CreditsManager.kaypadValue += 1;
 
-        Debug.Log("MeDejaEntrar");
-
         if (CreditsManager.kaypadValue == numKeypads)
         {
             SceneManager.LoadScene("CreditsScene");

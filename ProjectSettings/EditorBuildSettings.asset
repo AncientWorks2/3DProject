@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneMainMenu.unity
     guid: ea488c735993ed3429eb28670e70f1a2
   - enabled: 1
+    path: Assets/Scenes/CinematicScene.unity
+    guid: 8070c18255ecfea46ae85b22d4cdc4c6
+  - enabled: 1
     path: Assets/Scenes/Gameplay.unity
     guid: b458299a87fb684418097b474587b499
   - enabled: 1
