@@ -4303,11 +4303,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc5e9f4c6a0db624bb5c8627fc58ba23, type: 3}
---- !u!4 &983715706 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1498101681, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
-  m_PrefabInstance: {fileID: 4256145819384310782}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &990678771
 GameObject:
   m_ObjectHideFlags: 0
@@ -5507,27 +5502,6 @@ RectTransform:
   m_AnchoredPosition: {x: 154.9, y: -56.4}
   m_SizeDelta: {x: 309.8083, y: 44.1891}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1176702388 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3037568330379826543, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
-  m_PrefabInstance: {fileID: 4256145819384310782}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1176702401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176702388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9cafc258c857ea4a8a409e9aa7e88ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpRange: 10
-  moveForce: 200
-  holdObjectParent: {fileID: 983715706}
-  throwSpeed: 1000
 --- !u!1 &1204105427
 GameObject:
   m_ObjectHideFlags: 0
@@ -9654,7 +9628,7 @@ PrefabInstance:
     - target: {fileID: 478811127539710641, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
       propertyPath: panelDie
       value: 
-      objectReference: {fileID: 732565885}
+      objectReference: {fileID: 0}
     - target: {fileID: 478811127539710641, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
       propertyPath: waitTime
       value: 2

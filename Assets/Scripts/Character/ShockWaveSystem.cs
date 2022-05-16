@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ShockWaveSystem : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public class ShockWaveSystem : MonoBehaviour
 
     private EnemyWarriorNavigation _enNav;
     private InputSystemKeyboard _input;
+
+    public event Action OnShock = delegate { };
 
     private void Awake()
     {
@@ -70,6 +73,8 @@ public class ShockWaveSystem : MonoBehaviour
                 _enNav.shockedSpeed = speedShock;
                 _enNav.timeShocked = shockTime;
             }
+
+            OnShock();
 
             shock = false;
             activeShock = false;
