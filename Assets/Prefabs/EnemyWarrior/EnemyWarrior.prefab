@@ -1261,8 +1261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b537126a1e96864e8ee137deb74d1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 12
-  angle: 45
+  radius: 13
+  angle: 150
   targetMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1271,6 +1271,7 @@ MonoBehaviour:
     m_Bits: 183
   viewLight: {fileID: 3508935471204163216}
   viewColor: {r: 1, g: 0, b: 0, a: 1}
+  drawGizmos: 1
 --- !u!114 &4780153457517983653
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,6 +25,10 @@ public class ShockWaveSystem : MonoBehaviour
     [SerializeField]
     private Image loadShock;
 
+    //Debug
+    [SerializeField]
+    private bool drawGizmos;
+
     private Collider[] rangeChecks;
 
     public bool shock;
@@ -110,6 +114,16 @@ public class ShockWaveSystem : MonoBehaviour
             waitingTime = true;
 
             waitTime = startWaitTime;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (drawGizmos)
+        {
+            Gizmos.color = Color.yellow;
+
+            Gizmos.DrawWireSphere(transform.position, radius);
         }
     }
 }

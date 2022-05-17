@@ -18,6 +18,10 @@ public class FieldOfView : MonoBehaviour
     [SerializeField]
     private Color viewColor;
 
+    //Debug
+    [SerializeField]
+    private bool drawGizmos;
+
     //Send info
     private bool seePlayer;
     private Transform target;
@@ -96,5 +100,28 @@ public class FieldOfView : MonoBehaviour
     public RaycastHit ReturnHit()
     {
         return hit;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (drawGizmos)
+        {
+            Gizmos.color = Color.yellow;
+
+            Gizmos.DrawWireSphere(transform.position, radius);
+
+            Vector3 viewAngle01 = DirectionFromAngle(transform.eulerAngles.y, -angle / 2);
+            Vector3 viewAngle02 = DirectionFromAngle(transform.eulerAngles.y, angle / 2);
+
+            Gizmos.DrawLine(transform.position, transform.position + viewAngle01 * radius);
+            Gizmos.DrawLine(transform.position, transform.position + viewAngle02 * radius);
+        }
+    }
+
+    private Vector3 DirectionFromAngle(float eulerY, float angleInDegrees)
+    {
+        angleInDegrees += eulerY;
+
+        return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
     }
 }

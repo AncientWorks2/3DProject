@@ -9717,6 +9717,10 @@ PrefabInstance:
       propertyPath: loadShock
       value: 
       objectReference: {fileID: 1299812013}
+    - target: {fileID: 2857665255824292887, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
+      propertyPath: drawGizmos
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3037568330379826543, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
       propertyPath: m_Name
       value: Character
