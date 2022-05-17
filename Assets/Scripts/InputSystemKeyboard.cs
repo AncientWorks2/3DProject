@@ -32,70 +32,84 @@ public class InputSystemKeyboard : MonoBehaviour
 
     //GoodKeys events
     public event Action OnInvencible = delegate { };
+    public event Action OnFullStamina = delegate { };
+    public event Action OnChangeLayer = delegate { };
 
     // Update is called once per frame
     private void Update()
     {
-        //Keyboard
-        axHor = Input.GetAxis("Horizontal");
-        axVer = Input.GetAxis("Vertical");
-        //Mouse
-        moHor = Input.GetAxisRaw("Mouse X");
-        moVer = Input.GetAxisRaw("Mouse Y");
-        //Mouse position (to menu dinamic image)
-        mousePosX = Input.mousePosition.x;
-        mousePosY = Input.mousePosition.y;
-
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (!PauseManager.pauseMode)
         {
-            OnEnter();
+            //Keyboard
+            axHor = Input.GetAxis("Horizontal");
+            axVer = Input.GetAxis("Vertical");
+            //Mouse
+            moHor = Input.GetAxisRaw("Mouse X");
+            moVer = Input.GetAxisRaw("Mouse Y");
+            //Mouse position (to menu dinamic image)
+            mousePosX = Input.mousePosition.x;
+            mousePosY = Input.mousePosition.y;
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                OnEnter();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                OnPause(); //Cuando se pulsa la tecla "Esc" el juego se pausa
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                OnJump();
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                OnCrouch();
+            }
+
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                OnRun(true);
+            }
+            else
+            {
+                OnRun(false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                OnShock();
+            }
+
+            //InteractButton
+            if (Input.GetKeyDown(KeyCode.E)) { OnInteract(true); }
+            else { OnInteract(false); }
+
+            //PickUpKey
+            if (Input.GetMouseButtonDown(0)) { OnPick(true); OnKeyPad(true); }
+            else { OnPick(false); OnKeyPad(false); }
+
+            //ThrowObjectKey
+            if (Input.GetMouseButtonDown(1)) { OnThrow(); }
         }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            OnPause(); //Cuando se pulsa la tecla "Esc" el juego se pausa
-        }            
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            OnJump();
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            OnCrouch();
-        }
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            OnRun(true);
-        }
-        else
-        {
-            OnRun(false);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            OnShock();
-        }
-
-        //InteractButton
-        if (Input.GetKeyDown(KeyCode.E)) { OnInteract(true); }
-        else { OnInteract(false); }
-
-        //PickUpKey
-        if (Input.GetMouseButtonDown(0)) { OnPick(true); OnKeyPad(true); }
-        else { OnPick(false); OnKeyPad(false); }
-
-        //ThrowObjectKey
-        if (Input.GetMouseButtonDown(1)) { OnThrow(); }
-
         //God Keys
         //Invencible
         if (Input.GetKeyDown(KeyCode.Alpha0))
         {
             OnInvencible();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            OnFullStamina();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            OnChangeLayer();
         }
     }
 

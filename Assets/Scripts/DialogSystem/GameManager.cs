@@ -302,6 +302,9 @@ public class GameManager : MonoBehaviour
                 {
                     string sceneName = command.param1;
 
+                    PauseManager.pauseMode = false;
+
+
                     SceneManager.LoadScene(sceneName);
                 }
                 else if (command.id == CinematicCommandId.changeImage)
@@ -309,6 +312,8 @@ public class GameManager : MonoBehaviour
                     int objectIndex = Int32.Parse(command.param1);
 
                     image.sprite = sprites[objectIndex];
+
+
                     Debug.Log("chnage sprite");
                 }
                 else

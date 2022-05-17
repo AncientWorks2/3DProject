@@ -869,6 +869,7 @@ GameObject:
   - component: {fileID: 4694357409150291880}
   - component: {fileID: 8993392805049245440}
   - component: {fileID: 363028730673047105}
+  - component: {fileID: 8168336216536314527}
   m_Layer: 6
   m_Name: Character
   m_TagString: Player
@@ -1091,6 +1092,7 @@ MonoBehaviour:
   shockTime: 3
   waitTime: 6
   loadShock: {fileID: 0}
+  drawGizmos: 0
   shock: 0
   activeShock: 0
 --- !u!114 &7634524903566274417
@@ -1179,6 +1181,18 @@ MonoBehaviour:
   moveForce: 200
   holdObjectParent: {fileID: 1498101681}
   throwSpeed: 1000
+--- !u!114 &8168336216536314527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037568330379826543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4437f5463ab460342bf3f52177df5d2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3053176360248010593
 GameObject:
   m_ObjectHideFlags: 0

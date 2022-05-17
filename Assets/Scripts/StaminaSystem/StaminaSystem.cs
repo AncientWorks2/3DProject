@@ -28,6 +28,9 @@ public class StaminaSystem : MonoBehaviour
     private bool jumping;
     private bool waiting;
 
+    //God
+    private bool STAMINA;
+
     private InputSystemKeyboard _inputSystem;
 
     private void Awake()
@@ -42,12 +45,14 @@ public class StaminaSystem : MonoBehaviour
         _inputSystem.OnRun += SetRunDecrease;
         _inputSystem.OnCrouch += SetCrouchDecrease;
         _inputSystem.OnJump += SetJumpDecrease;
+        _inputSystem.OnFullStamina += SetFullStatmina;
     }
     private void OnDisable()
     {
         _inputSystem.OnRun -= SetRunDecrease;
         _inputSystem.OnCrouch -= SetCrouchDecrease;
         _inputSystem.OnJump -= SetJumpDecrease;
+        _inputSystem.OnFullStamina -= SetFullStatmina;
     }
 
     // Start is called before the first frame update
@@ -63,21 +68,21 @@ public class StaminaSystem : MonoBehaviour
     void Update()
     {
         //Choose wich decrement value we need
-        if (crouched && jumping)
+        if (crouched && jumping && !STAMINA)
         {
             activeStaminaDecrease = jumpCrouchDecrease;
             decrease = true;
 
             jumping = false;
         }
-        else if (jumping)
+        else if (jumping && !STAMINA)
         {
             activeStaminaDecrease = jumpDecrease;
             decrease = true;
 
             jumping = false;
         }
-        else if (running && !jumping)
+        else if (running && !jumping && !STAMINA)
         {
             if (_inputSystem.axHor != 0 || _inputSystem.axVer != 0)
             {
@@ -89,7 +94,7 @@ public class StaminaSystem : MonoBehaviour
                 decrease = false;
             }
         }
-        else if (running && jumping)
+        else if (running && jumping && !STAMINA)
         {
             if (_inputSystem.axHor != 0 || _inputSystem.axVer != 0)
             {
@@ -177,5 +182,19 @@ public class StaminaSystem : MonoBehaviour
         {
             jumping = true;
         }
+    }
+
+    void SetFullStatmina()
+    {
+        if (STAMINA)
+        {
+            STAMINA = false;
+        }
+        else
+        {
+            STAMINA = true;
+        }
+
+        Debug.Log("Stamina: " + STAMINA);
     }
 }
