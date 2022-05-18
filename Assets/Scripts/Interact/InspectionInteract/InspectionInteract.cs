@@ -19,7 +19,7 @@ public class InspectionInteract : InteractManager
 
     public override string GetDescription()
     {
-        return "Press [E] to inspect the object";
+        return "Press [E] to inspect the object and receive telekinesis ability";
 
     }
 
