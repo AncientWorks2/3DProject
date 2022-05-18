@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 
 public class PickupObjects : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class PickupObjects : MonoBehaviour
     [SerializeField] private float moveForce;
     [SerializeField] private Transform holdObjectParent;
     public float throwSpeed;
+
+    [SerializeField]
+    private Image loadTelelk;
 
     private GameObject heldObject;
     private Camera camera;
@@ -117,5 +121,12 @@ public class PickupObjects : MonoBehaviour
         ThrowObject();
     }
 
+    private void Update()
+    {
+        if (loadTelelk.fillAmount != 1)
+        {
+            loadTelelk.fillAmount += Time.deltaTime;
+        }
+    }
 
 }

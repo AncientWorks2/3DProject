@@ -25214,7 +25214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4994399380068676, guid: 113eb5af96ee2094eac8dc88dfc5b274, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.898834
+      value: 39.24
       objectReference: {fileID: 0}
     - target: {fileID: 4994399380068676, guid: 113eb5af96ee2094eac8dc88dfc5b274, type: 3}
       propertyPath: m_LocalPosition.y
@@ -46522,25 +46522,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa7c0b71dacb6cf4fab816deac08002a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 1062870459301972, guid: b8fc8c3d0e0ff9b4089c4e346ac42ecc, type: 3}
-  - {fileID: 1293296949879540, guid: f60a68fd009415d44bee80b63a157895, type: 3}
-  - {fileID: 1751948307316588, guid: 37f16a7beb3cae449a4885b50959b6ae, type: 3}
-  - {fileID: 1412463589006636, guid: f2b1c300a6cdfb14c98d8e2408ca7884, type: 3}
-  numObjects: 10
-  rotX: 0
-  rotY: 0
-  rotZ: 0
-  distX: 5
-  distY: 5
-  distZ: 5
-  randomPosX: 10
-  randomPosY: 0
-  randomPosZ: 10
-  randomRotX: 2
-  randomRotY: 0
-  randomRotZ: 2
-  generateObjects: 0
 --- !u!1001 &1870832065
 PrefabInstance:
   m_ObjectHideFlags: 0

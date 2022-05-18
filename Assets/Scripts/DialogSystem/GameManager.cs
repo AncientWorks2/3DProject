@@ -305,7 +305,10 @@ public class GameManager : MonoBehaviour
                     PauseManager.pauseMode = false;
 
 
-                    SceneManager.LoadScene(sceneName);
+                    //SceneManager.LoadSceneAsync(sceneName);
+
+                    SceneManager.LoadSceneAsync(sceneName);
+                    //SceneManager.LoadSceneAsync("Level01Room01", LoadSceneMode.Additive);
                 }
                 else if (command.id == CinematicCommandId.changeImage)
                 {

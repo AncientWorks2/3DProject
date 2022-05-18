@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityCamera: {fileID: 5180945241334436494}
   explosionParticle: {fileID: 884131781939802246, guid: c08052b1b653d764884961346786b3d6, type: 3}
-  timeToSpotPlayer: 1
+  timeToSpotPlayer: 1.5
   maxTimer: 2
   spotlight: {fileID: 3300634907153397467}
   viewDistance: 10
