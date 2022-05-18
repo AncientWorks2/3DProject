@@ -10317,7 +10317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5956455058962496819, guid: 34f6485612bc59c4f80e9338688c368d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -264.367
+      value: -264.376
       objectReference: {fileID: 0}
     - target: {fileID: 5956455058962496819, guid: 34f6485612bc59c4f80e9338688c368d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15556,7 +15556,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3476035933828912471, guid: f0075f9ff8684d2498269202fd7753ee, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0075f9ff8684d2498269202fd7753ee, type: 3}

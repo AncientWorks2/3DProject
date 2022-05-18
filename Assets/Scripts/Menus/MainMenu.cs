@@ -15,7 +15,12 @@ public class MainMenu : MonoBehaviour
     {
         if (PauseManager.pauseMode)
         {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
             Cursor.lockState = CursorLockMode.None;
+
         }
     }
 }

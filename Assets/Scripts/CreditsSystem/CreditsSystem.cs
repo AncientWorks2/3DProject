@@ -39,5 +39,7 @@ public class CreditsSystem : MonoBehaviour
         {
             SceneManager.LoadScene("CreditsScene");
         }
+
+        PauseManager.pauseMode = false;
     }
 }

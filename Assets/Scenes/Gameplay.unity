@@ -6267,8 +6267,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 153.19525, y: 7, z: 50.52308}
-  m_Center: {x: -44.23047, y: 4, z: 15.476139}
+  m_Size: {x: 153.19525, y: 9.994403, z: 50.52308}
+  m_Center: {x: -44.23047, y: 2.5027986, z: 15.476139}
 --- !u!4 &1249359965
 Transform:
   m_ObjectHideFlags: 0
@@ -8523,6 +8523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1861921172}
   - component: {fileID: 1861921171}
+  - component: {fileID: 1861921173}
   m_Layer: 0
   m_Name: Level02Room02
   m_TagString: Untagged
@@ -8557,6 +8558,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1861921173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861921170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b69d6cfe7270a4fa24c4c322170232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1862635124
 GameObject:
   m_ObjectHideFlags: 0
@@ -9408,8 +9422,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 112.42438, y: 9, z: 41.397568}
-  m_Center: {x: 46.848694, y: 4.084635, z: 6.496601}
+  m_Size: {x: 112.42438, y: 9, z: 52.062508}
+  m_Center: {x: 46.848694, y: 4.084635, z: 1.1641312}
 --- !u!4 &2027250792
 Transform:
   m_ObjectHideFlags: 0
@@ -9871,7 +9885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2408384430456721365, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.833
       objectReference: {fileID: 0}
     - target: {fileID: 2408384430456721365, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
       propertyPath: m_LocalPosition.z
