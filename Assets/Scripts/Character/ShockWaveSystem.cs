@@ -69,14 +69,14 @@ public class ShockWaveSystem : MonoBehaviour
         {
             rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
 
-            for (int i = 0; i < rangeChecks.Length; i++)
-            {
-                _enNav = rangeChecks[i].GetComponent<EnemyWarriorNavigation>();
+                for (int i = 0; i < rangeChecks.Length; i++)
+                {
+                    _enNav = rangeChecks[i].GetComponent<EnemyWarriorNavigation>();
 
-                _enNav.shocked = shock;
-                _enNav.shockedSpeed = speedShock;
-                _enNav.timeShocked = shockTime;
-            }
+                    _enNav.shocked = shock;
+                    _enNav.shockedSpeed = speedShock;
+                    _enNav.timeShocked = shockTime;
+                }
 
             OnShock();
 

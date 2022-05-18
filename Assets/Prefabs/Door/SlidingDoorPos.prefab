@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 881779528695815047}
   - component: {fileID: 6678679193105751159}
   - component: {fileID: 3589131257012060732}
+  - component: {fileID: 7108464362610694897}
   m_Layer: 0
   m_Name: SlidingDoor
   m_TagString: Untagged
@@ -259,6 +260,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: e2b9c207d146cff47b4e776391205a64, type: 3}
   soundSource: {fileID: 9217452287549177375}
+--- !u!208 &7108464362610694897
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120401382590094711}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.96900004, y: 1.25, z: 0.063}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.96900004, y: 1.25, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &6718135834124740595
 GameObject:
   m_ObjectHideFlags: 0
