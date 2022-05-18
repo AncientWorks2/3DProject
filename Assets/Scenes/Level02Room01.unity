@@ -2996,12 +2996,8 @@ MonoBehaviour:
   - {fileID: 962318275}
   - {fileID: 860001986}
   wall:
-  - {fileID: 299020538}
-  - {fileID: 1129284490}
   - {fileID: 1129801349}
   - {fileID: 380680241}
-  - {fileID: 840769764}
-  - {fileID: 0}
   - {fileID: 1669869228}
   - {fileID: 1792480462}
   - {fileID: 18931501}
@@ -3054,9 +3050,9 @@ MonoBehaviour:
   - {fileID: 1616951982}
   - {fileID: 336162213}
   - {fileID: 1586894882}
+  - {fileID: 1531464552}
   - {fileID: 1182419499}
   - {fileID: 27993287}
-  - {fileID: 1531464552}
   - {fileID: 395333792}
   - {fileID: 291903854}
   - {fileID: 1562718859}
@@ -3067,7 +3063,6 @@ MonoBehaviour:
   - {fileID: 141436271}
   - {fileID: 1618504660}
   - {fileID: 202680325}
-  - {fileID: 0}
   - {fileID: 358468055}
   - {fileID: 7249116}
   - {fileID: 289605497}
@@ -3158,9 +3153,9 @@ MonoBehaviour:
   dotScale: 3
   cameraOffset: {x: 0, y: 0, z: 0}
   floorOffset: {x: 6, y: 4.5, z: 0}
-  wallVerOffset: {x: 0, y: -1.23, z: 0}
-  wallHorOffset: {x: -1.23, y: 0, z: 0}
-  platformOffset: {x: 0, y: 0, z: 0}
+  wallVerOffset: {x: 0, y: -1.87, z: 0}
+  wallHorOffset: {x: 1.4, y: 0, z: 0}
+  platformOffset: {x: 1.15, y: 1.15, z: 0}
   minimapPos: {fileID: 221934192}
   cameraDistance: 0
 --- !u!4 &221934192
@@ -3171,7 +3166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221934190}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.815002, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18344,7 +18339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4446799326750123094, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -316.11502
+      value: -349.15
       objectReference: {fileID: 0}
     - target: {fileID: 4446799326750123094, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18352,7 +18347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4446799326750123094, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -39.3
+      value: -59.37
       objectReference: {fileID: 0}
     - target: {fileID: 4446799326750123094, guid: 2ab3d11413ac96d4cb024eeef3468c87, type: 3}
       propertyPath: m_LocalRotation.w
