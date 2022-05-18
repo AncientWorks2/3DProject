@@ -1084,15 +1084,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2744e36f8490f440bcae2f00b93a4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 6
+  radius: 5
   targetMask:
     serializedVersion: 2
     m_Bits: 256
   speedShock: 1.5
   shockTime: 3
-  waitTime: 10
+  waitTime: 6
   loadShock: {fileID: 0}
-  drawGizmos: 1
+  drawGizmos: 0
   shock: 0
   activeShock: 0
 --- !u!114 &7634524903566274417

@@ -59,8 +59,8 @@
     <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\Utils\BoneRendererUtils.cs" />
     <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\InverseSolve\Constraints\MultiParentInverseConstraint.cs" />
     <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\InverseSolve\Constraints\TwistChainInverseConstraint.cs" />
-    <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\Utils\AnimationWindowUtils.cs" />
     <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\AnimationRig\WeightedTransformDrawer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\Utils\AnimationWindowUtils.cs" />
     <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\InverseSolve\AnimationJobs\TwistChainInverseConstraintJob.cs" />
     <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\Effectors\RigEffectorOverlay.cs" />
     <Compile Include="Library\PackageCache\com.unity.animation.rigging@1.0.3\Editor\AnimationRig\RigEditor.cs" />

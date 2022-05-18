@@ -31,5 +31,6 @@ public class DieSystem : MonoBehaviour
     private void Die()
     {
         SceneManager.LoadScene("DieScene");
+        Cursor.lockState = CursorLockMode.None;
     }
 }

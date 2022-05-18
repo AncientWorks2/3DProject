@@ -21,16 +21,6 @@ public class SpiderSpawn : MonoBehaviour
     {
         GetComponent<SecurityCamSystem>().SpawningSpiders -= Spawn;
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void Spawn()
     {

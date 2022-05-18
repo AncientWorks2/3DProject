@@ -47,12 +47,11 @@ public class FieldOfView : MonoBehaviour
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, out hit, distanceToTarget, obstructionMask))//Physics.Raycast(transform.position, directionToTarget, out hit, distanceToTarget, targetMask))
+                if (Physics.Raycast(transform.position, directionToTarget, out hit, distanceToTarget, targetMask))
                 {
                     seePlayer = true;
 
                     ChangeColor(seePlayer);
-                    Debug.Log("See player");
                 }
                 else
                 {

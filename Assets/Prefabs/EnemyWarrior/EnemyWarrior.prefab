@@ -1268,7 +1268,7 @@ MonoBehaviour:
     m_Bits: 64
   obstructionMask:
     serializedVersion: 2
-    m_Bits: 951
+    m_Bits: 183
   viewLight: {fileID: 3508935471204163216}
   viewColor: {r: 1, g: 0, b: 0, a: 1}
   drawGizmos: 1

@@ -11,6 +11,7 @@ public class SpiderFollowing : MonoBehaviour
     public float radius;
     public LayerMask layerMask;
     public bool spiderInPlayer;
+    public static bool spiderInHand;
 
     private Rigidbody _rb;
 
@@ -23,26 +24,35 @@ public class SpiderFollowing : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player").transform;
+        spiderInHand = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Physics.CheckSphere(transform.position, radius, layerMask))
+        if (!spiderInHand)
         {
-            _rb.AddForce(Vector3.up * spiderJumpForce, ForceMode.VelocityChange);
-            spiderInPlayer = true;
+            if (Physics.CheckSphere(transform.position, radius, layerMask))
+            {
+                _rb.AddForce(Vector3.up * spiderJumpForce, ForceMode.VelocityChange);
+                spiderInPlayer = true;
 
-        }
-        else
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, spiderSpeed * Time.deltaTime);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, target.position, spiderSpeed * Time.deltaTime);
+                spiderInPlayer = false;
+            }
         }
 
 
         if(spiderInPlayer)
         {
             CharacterEngine.activeSpeed = 2f;
+        }
+        else
+        {
+            CharacterEngine.activeSpeed = 8f;
         }
 
            

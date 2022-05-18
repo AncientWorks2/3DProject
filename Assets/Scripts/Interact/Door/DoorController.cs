@@ -23,7 +23,7 @@ public class DoorController : InteractManager
     private Vector3 endTargetPosition;
     private Vector3 startTargetPosition;
     [SerializeField] private Transform endDoor;
-    private bool isOpeningSlide;
+    public bool isOpeningSlide;
 
     public event Action OnInteract = delegate { };
 

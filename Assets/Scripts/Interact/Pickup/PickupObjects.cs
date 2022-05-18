@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
 
 public class PickupObjects : MonoBehaviour
 {
@@ -10,9 +8,6 @@ public class PickupObjects : MonoBehaviour
     [SerializeField] private float moveForce;
     [SerializeField] private Transform holdObjectParent;
     public float throwSpeed;
-
-    [SerializeField]
-    private Image loadTelek;
 
     private GameObject heldObject;
     private Camera camera;
@@ -41,6 +36,8 @@ public class PickupObjects : MonoBehaviour
             MoveObject();
         }
 
+       
+
     }
 
     void MoveObject()
@@ -62,6 +59,14 @@ public class PickupObjects : MonoBehaviour
 
             objectRigidbody.transform.parent = holdObjectParent;
             heldObject = pickObject;
+        }
+        if (pickObject.CompareTag("Spider"))
+        {
+            SpiderFollowing.spiderInHand = true;
+        }
+        else
+        {
+            SpiderFollowing.spiderInHand = false;
         }
     }
 
@@ -112,14 +117,5 @@ public class PickupObjects : MonoBehaviour
         ThrowObject();
     }
 
-    private void Update()
-    {
-        if (GetComponent<PickupObjects>().enabled)
-        {
-            if (loadTelek.fillAmount <= 1)
-            {
-                loadTelek.fillAmount += Time.deltaTime;
-            }
-        }
-    }
+
 }

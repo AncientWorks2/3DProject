@@ -63,7 +63,8 @@ public class SecurityCamSystem : MonoBehaviour
         
             if (playerVisibleTimer >= timeToSpotPlayer)
             {
-                StartCoroutine("DestroyCountdown");
+                SpawningSpiders();
+                playerVisibleTimer = 0;
             }
         }
 
@@ -91,19 +92,6 @@ public class SecurityCamSystem : MonoBehaviour
         return false;
     }
 
-    IEnumerator DestroyCountdown()
-    {
-
-        if(timer > 0)
-        { 
-            timer -= Time.deltaTime;
-            Debug.Log(timer);
-        }
-        SpawningSpiders();
-
-
-        yield return new WaitForSeconds(1f);
-    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

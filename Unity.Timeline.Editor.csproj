@@ -256,8 +256,8 @@
     <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\treeview\Snapping\ISnappable.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\Manipulators\EditMode.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\treeview\TimelineDataSource.cs" />
-    <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\Animation\AnimationOffsetMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\CustomEditors\MarkerEditor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\Animation\AnimationOffsetMenu.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\Utilities\ClipModifier.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\Signals\SignalReceiverHeader.cs" />
     <Compile Include="Library\PackageCache\com.unity.timeline@1.5.6\Editor\Audio\AudioClipPropertiesDrawer.cs" />

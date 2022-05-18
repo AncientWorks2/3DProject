@@ -208,8 +208,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Reflection\Operators\AmbiguousOperatorException.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Serialization\SerializeAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Dependencies\FullSerializer\Converters\Unity\InputAction_DirectConverter.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Serialization\SerializationData.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Utilities\HashUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Serialization\SerializationData.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Events\MessageListeners\UIEventsInterfacesListeners\UnityOnPointerExitMessageListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Ensure\EnsureThat.Collections.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Events\EventBus.cs" />
@@ -335,9 +335,9 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Cloning\ISpecifiesCloner.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\EditorBinding\Inspector\InspectorToggleLeftAttribute.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\EditorBinding\InspectableAttribute.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Connections\ConnectionCollectionBase.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Utilities\ReferenceCollector.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Graphs\GraphsExceptionUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Connections\ConnectionCollectionBase.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Serialization\ISerializationDependency.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Reflection\RuntimeCodebase.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Dependencies\FullSerializer\fsObjectAttribute.cs" />
@@ -420,9 +420,9 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Reflection\Optimization\StaticInvokerBase.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Ensure\EnsureThat.ValueTypes.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Events\MessageListeners\UIEventsInterfacesListeners\UnityOnSubmitMessageListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Dependencies\FullSerializer\Converters\fsDictionaryConverter.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Profiling\ProfiledSegment.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Input\PressState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Dependencies\FullSerializer\Converters\fsDictionaryConverter.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Cloning\Cloners\ListCloner.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Variables\VariableKind.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\EditorBinding\Typeset.cs" />
@@ -472,8 +472,8 @@
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Graphs\IGraphItem.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Reflection\Operators\MultiplicationHandler.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Events\MessageListeners\UIEventsListeners\UnityOnToggleValueChangedMessageListener.cs" />
-    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Events\MessageListeners\MonoBehaviourMessageListeners\UnityOnMouseEnterMessageListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Utilities\IGettable.cs" />
+    <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Events\MessageListeners\MonoBehaviourMessageListeners\UnityOnMouseEnterMessageListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Reflection\Optimization\InstancePropertyAccessor.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Events\MessageListeners\MonoBehaviourMessageListeners\UnityOnTriggerExit2DMListener.cs" />
     <Compile Include="Library\PackageCache\com.unity.visualscripting@1.6.1\Runtime\VisualScripting.Core\Events\MessageListeners\UIEventsListeners\UnityOnSliderValueChangedMessageListener.cs" />
