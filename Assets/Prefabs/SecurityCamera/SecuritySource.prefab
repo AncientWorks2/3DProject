@@ -88,10 +88,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.3507228, g: 1, b: 0, a: 1}
-  m_Intensity: 40
+  m_Intensity: 60
   m_Range: 12
-  m_SpotAngle: 44.42105
-  m_InnerSpotAngle: 31.263159
+  m_SpotAngle: 56.89492
+  m_InnerSpotAngle: 40.173065
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   securityCamera: {fileID: 5180945241334436494}
   explosionParticle: {fileID: 884131781939802246, guid: c08052b1b653d764884961346786b3d6, type: 3}
-  timeToSpotPlayer: 3
+  timeToSpotPlayer: 1
   maxTimer: 2
   spotlight: {fileID: 3300634907153397467}
   viewDistance: 10

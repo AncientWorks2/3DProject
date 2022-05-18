@@ -132,7 +132,7 @@ public class DoorController : InteractManager
 
     public override string GetDescription()
     {
-        if (lockedByPassword) { return "Locked by Password"; }
+        if (lockedByPassword) { return "Locked"; }
 
         else
         {

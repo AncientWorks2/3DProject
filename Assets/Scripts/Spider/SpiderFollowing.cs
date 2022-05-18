@@ -48,11 +48,11 @@ public class SpiderFollowing : MonoBehaviour
 
         if(spiderInPlayer)
         {
-            CharacterEngine.activeSpeed = 2f;
+            CharacterEngine.activeSpeed = 1f;
         }
         else
         {
-            CharacterEngine.activeSpeed = 8f;
+            CharacterEngine.activeSpeed = 7f;
         }
 
            

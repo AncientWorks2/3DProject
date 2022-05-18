@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class BallPuzzleSystem : BallPuzzleCollision
 {
+    
     public event Action OnYellow = delegate { };
     public event Action OnBlue = delegate { };
     public event Action OnRed = delegate { };
@@ -19,10 +20,11 @@ public class BallPuzzleSystem : BallPuzzleCollision
     private Text passwordText;
     [SerializeField]
     private int numPassword;
+    
 
     public BoxCategory categoryBox;
     private bool OnTriggerYellow, OnTriggerRed, OnTriggerGreen, OnTriggerBlue;
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -102,16 +104,19 @@ public class BallPuzzleSystem : BallPuzzleCollision
             OnTriggerYellow = true;
 
         }
+
         else if (other.CompareTag("Red"))
         {
             OnTriggerRed = true;
 
         }
+
         else if (other.CompareTag("Green"))
         {
             OnTriggerGreen = true;
 
         }
+
         else if (other.CompareTag("Blue"))
         {
             OnTriggerBlue = true;
