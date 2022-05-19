@@ -17,6 +17,9 @@ public class LoadMenu : MonoBehaviour
 
         SceneManager.LoadScene("SceneMainMenu");
 
+        PauseManager.pauseMode = false;
+
+
         //Time.timeScale = 1f;
     }
 }

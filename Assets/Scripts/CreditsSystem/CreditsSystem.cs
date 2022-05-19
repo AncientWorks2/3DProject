@@ -34,11 +34,7 @@ public class CreditsSystem : MonoBehaviour
     void LoadCredits()
     {
         CreditsManager.kaypadValue += 1;
-
-        if (CreditsManager.kaypadValue == numKeypads)
-        {
             SceneManager.LoadScene("CreditsScene");
-        }
 
         PauseManager.pauseMode = false;
     }

@@ -1261,8 +1261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b537126a1e96864e8ee137deb74d1e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 13
-  angle: 150
+  radius: 11
+  angle: 125
   targetMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1286,7 +1286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotPoint:
   - {fileID: 6286697881571387558}
-  damage: 30
+  damage: 20
   shotDuration: 0.7
   playerLayer:
     serializedVersion: 2
