@@ -180,7 +180,7 @@ public class CharacterEngine : MonoBehaviour
 
 	void SetRun(bool running)
 	{
-		if (!crouched && GroundCheckerManager.isGrounded && StaminaManager.currentStamina >= 0)
+		if (!crouched && GroundCheckerManager.isGrounded && StaminaManager.currentStamina >= 0 && !ShockedManager.shocked)
 		{
 			run = running;
 

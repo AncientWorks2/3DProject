@@ -39,6 +39,7 @@ public class SpiderFollowing : MonoBehaviour
 
                 ShockedManager.shocked = spiderInPlayer;
 
+                Debug.Log(spiderInPlayer);
             }
             else
             {
