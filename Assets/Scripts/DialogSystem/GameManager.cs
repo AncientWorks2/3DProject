@@ -24,6 +24,12 @@ public class GameManager : MonoBehaviour
 
     public Transform[] lightPositions;
 
+    public GameObject loadingUI;
+
+    public Image loadingProgress;
+
+    List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
+
 
     public enum CinematicCommandId
     {
@@ -304,10 +310,12 @@ public class GameManager : MonoBehaviour
 
                     PauseManager.pauseMode = false;
 
+                    loadingUI.SetActive(true);
 
-                    //SceneManager.LoadSceneAsync(sceneName);
+                    scenesToLoad.Add(SceneManager.LoadSceneAsync(sceneName));
+                    //scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Additive));
 
-                    SceneManager.LoadSceneAsync(sceneName);
+                    StartCoroutine(LoadingScreen());
                     //SceneManager.LoadSceneAsync("Level01Room01", LoadSceneMode.Additive);
                 }
                 else if (command.id == CinematicCommandId.changeImage)
@@ -356,8 +364,25 @@ public class GameManager : MonoBehaviour
         //dialogIndex = index;
     }
 
+    IEnumerator LoadingScreen()
+    {
+        float totalProgress = 0;
+
+        for (int i = 0; i < scenesToLoad.Count; i++)
+        {
+            while (!scenesToLoad[i].isDone)
+            {
+                totalProgress += scenesToLoad[i].progress;
+                loadingProgress.fillAmount = totalProgress / scenesToLoad.Count;
+
+                yield return null;
+            }
+        }
+    }
+
     public bool IsCinematicMode()
     {
         return isCinematicMode;
-    }    
+    }  
+    
 }

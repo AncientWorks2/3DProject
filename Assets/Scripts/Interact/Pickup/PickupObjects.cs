@@ -64,13 +64,12 @@ public class PickupObjects : MonoBehaviour
             objectRigidbody.transform.parent = holdObjectParent;
             heldObject = pickObject;
         }
+
         if (pickObject.CompareTag("Spider"))
         {
-            SpiderFollowing.spiderInHand = true;
-        }
-        else
-        {
-            SpiderFollowing.spiderInHand = false;
+            pickObject.GetComponent<SpiderFollowing>().spiderInHand = true;
+
+            //SpiderFollowing.spiderInHand = true;
         }
     }
 

@@ -10063,6 +10063,14 @@ PrefabInstance:
       propertyPath: drawGizmos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2999346489705563007, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
+      propertyPath: shockedJump
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999346489705563007, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
+      propertyPath: shockedSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3037568330379826543, guid: a99fad001e2662e4f93f40b3c19e26b9, type: 3}
       propertyPath: m_Name
       value: Character

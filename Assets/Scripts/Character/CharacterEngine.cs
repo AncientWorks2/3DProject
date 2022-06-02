@@ -19,6 +19,10 @@ public class CharacterEngine : MonoBehaviour
 	[SerializeField]
 	private float withoutStaminaJumpForce;
 	[SerializeField]
+	private float shockedSpeed;
+	[SerializeField]
+	private float shockedJump;
+	[SerializeField]
 	private float sensitivity;
 	[SerializeField]
 	private float gravity;
@@ -111,6 +115,12 @@ public class CharacterEngine : MonoBehaviour
 			activeSpeed = withoutStaminaSpeed;
 			activeJumpForce = withoutStaminaJumpForce;
 		}
+
+		if (ShockedManager.shocked)
+        {
+			activeSpeed = shockedSpeed;
+			activeJumpForce = shockedJump;
+        }
 
 		movement = transform.rotation * movement;
 		_rb.velocity = new Vector3(movement.x, movement.y, movement.z);

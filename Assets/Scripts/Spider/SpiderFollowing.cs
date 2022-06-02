@@ -11,7 +11,7 @@ public class SpiderFollowing : MonoBehaviour
     public float radius;
     public LayerMask layerMask;
     public bool spiderInPlayer;
-    public static bool spiderInHand;
+    public bool spiderInHand;
 
     private Rigidbody _rb;
 
@@ -37,26 +37,35 @@ public class SpiderFollowing : MonoBehaviour
                 _rb.AddForce(Vector3.up * spiderJumpForce, ForceMode.VelocityChange);
                 spiderInPlayer = true;
 
+                ShockedManager.shocked = spiderInPlayer;
+
             }
             else
             {
                 transform.position = Vector3.MoveTowards(transform.position, target.position, spiderSpeed * Time.deltaTime);
                 spiderInPlayer = false;
+
+                ShockedManager.shocked = spiderInPlayer;
             }
+        }
+        else //spiderHand == true
+        {
+            Destroy(gameObject);
+
+            spiderInPlayer = false;
+
+            ShockedManager.shocked = spiderInPlayer;
         }
 
 
-        if(spiderInPlayer)
+        /*if (spiderInPlayer)
         {
             CharacterEngine.activeSpeed = 1f;
         }
-        else
+        else //spiderInPlayer == false
         {
             CharacterEngine.activeSpeed = 7f;
-        }
-
-           
-        
+        }*/
     }
 
 
