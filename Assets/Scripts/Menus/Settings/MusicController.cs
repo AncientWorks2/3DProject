@@ -9,8 +9,10 @@ public class MusicController : MonoBehaviour
 {
     public AudioMixer mixer;
 
-    private float sValue;
+    [SerializeField]
+    private Text sliderValor;
 
+    private float sValue;
 
     public void SetLevel (float sliderValue)
     {
@@ -20,6 +22,10 @@ public class MusicController : MonoBehaviour
         sValue = PlayerPrefs.GetFloat("musicVolume");
 
         mixer.SetFloat("MusicVol", Mathf.Log10(sValue) * 20);
+
+        sValue = (sliderValue / gameObject.GetComponent<Slider>().maxValue) * 100;
+
+        sliderValor.text = Mathf.Round(sValue).ToString() + "%";
     }
 
     public void Update()

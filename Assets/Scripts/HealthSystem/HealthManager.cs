@@ -4,6 +4,6 @@ using UnityEngine;
 
 public static class HealthManager
 {
-    public static int playerHealth;
-    public static int maxPlayerHealth;
+    public static float playerHealth;
+    public static float maxPlayerHealth;
 }

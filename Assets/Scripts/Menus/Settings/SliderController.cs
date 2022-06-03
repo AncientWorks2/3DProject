@@ -11,6 +11,9 @@ public class SliderController : MonoBehaviour
     [SerializeField]
     private Slider _sliderFX;
 
+    [SerializeField]
+    private Slider _sliderSensivity;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +26,7 @@ public class SliderController : MonoBehaviour
         _sliderMusic.value = PlayerPrefs.GetFloat("musicVolume");
 
         _sliderFX.value = PlayerPrefs.GetFloat("fxVolume");
+
+        _sliderSensivity.value = PlayerPrefs.GetFloat("mouseSense");
     }
 }

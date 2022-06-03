@@ -9,6 +9,9 @@ public class FXController : MonoBehaviour
 {
     public AudioMixer mixer;
 
+    [SerializeField]
+    private Text sliderValor;
+
     private float sValue;
 
 
@@ -20,6 +23,10 @@ public class FXController : MonoBehaviour
         sValue = PlayerPrefs.GetFloat("fxVolume");
 
         mixer.SetFloat("FXVolume", Mathf.Log10(sValue) * 20);
+
+        sValue = (sliderValue / gameObject.GetComponent<Slider>().maxValue) * 100;
+
+        sliderValor.text = Mathf.Round(sValue).ToString() + "%";
     }
 
     // Update is called once per frame

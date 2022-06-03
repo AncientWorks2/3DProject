@@ -131,6 +131,7 @@ MonoBehaviour:
   moveForce: 200
   holdObjectParent: {fileID: 1498101681}
   throwSpeed: 1000
+  loadTelelk: {fileID: 0}
 --- !u!1 &134637447711795511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,6 +1030,8 @@ MonoBehaviour:
   jumpForce: 4.5
   crouchJumpForce: 2.5
   withoutStaminaJumpForce: 1
+  shockedSpeed: 0
+  shockedJump: 0
   sensitivity: 50
   gravity: 9.81
   cam: {fileID: 81262681385717783}
@@ -1071,6 +1074,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 150
   maxHealth: 150
+  waitTimer: 0
+  healthIncrease: 0
   INVENCIBLE: 0
 --- !u!114 &2857665255824292887
 MonoBehaviour:
@@ -1181,6 +1186,7 @@ MonoBehaviour:
   moveForce: 200
   holdObjectParent: {fileID: 1498101681}
   throwSpeed: 1000
+  loadTelelk: {fileID: 0}
 --- !u!114 &8168336216536314527
 MonoBehaviour:
   m_ObjectHideFlags: 0

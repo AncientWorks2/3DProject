@@ -88,6 +88,9 @@ public class CharacterEngine : MonoBehaviour
 
 	void FixedUpdate()
 	{
+
+		sensitivity = PlayerPrefs.GetFloat("mouseSense") * 1000;
+
 		moveFB = _inputSystem.axHor * activeSpeed;
 		moveLR = _inputSystem.axVer * activeSpeed;
 

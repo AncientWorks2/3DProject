@@ -5,11 +5,21 @@ using System;
 
 public class CharacterHealthSystem : HealthSystem
 {
-    public event Action OnHealthZero = delegate { };
+    [SerializeField]
+    private float waitTimer;
+    [SerializeField]
+    private float healthIncrease;
+
+    private float initialWaitTime;
+    private bool waiting;
 
     public bool INVENCIBLE;
 
-    InputSystemKeyboard _inputSystem;
+    public bool hit;
+
+    private InputSystemKeyboard _inputSystem;
+
+    public event Action OnHealthZero = delegate { };
 
     private void Awake()
     {
@@ -32,6 +42,7 @@ public class CharacterHealthSystem : HealthSystem
 
     void Start()
     {
+        initialWaitTime = waitTimer;
     }
 
     public override void RestHealth(int restHealthValue)
@@ -39,6 +50,11 @@ public class CharacterHealthSystem : HealthSystem
         if (!INVENCIBLE)
         {
             health -= restHealthValue;
+
+            waitTimer = initialWaitTime;
+
+            hit = true;
+
         }
 
         if (health <= 0)
@@ -53,6 +69,27 @@ public class CharacterHealthSystem : HealthSystem
     private void Update()
     {
         HealthManager.playerHealth = health;
+
+        if (health < maxHealth && _inputSystem.axHor == 0 && _inputSystem.axVer == 0)
+        {
+            if (waitTimer <= 0)
+            {
+                health += healthIncrease * Time.deltaTime;
+
+                if (health >= maxHealth)
+                {
+                    waitTimer = initialWaitTime;
+                }
+            }
+            else
+            {
+                waitTimer -= Time.deltaTime;
+            }
+        }
+        else
+        {
+            waitTimer = initialWaitTime;
+        }
     }
 
     public void SetInvencible()
@@ -67,8 +104,18 @@ public class CharacterHealthSystem : HealthSystem
         }
     }
 
-    public int ReturnHealth()
+    public float ReturnHealth()
     {
         return health;
+    }
+
+    public float ReturnMaxHealth()
+    {
+        return maxHealth;
+    }
+
+    public bool ReturnHit()
+    {
+        return hit;
     }
 }

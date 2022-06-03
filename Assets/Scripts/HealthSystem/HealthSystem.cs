@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class HealthSystem : MonoBehaviour
 {
-    public int health;
+    public float health;
 
-    public int maxHealth;
+    public float maxHealth;
 
     public abstract void RestHealth(int restHealthValue);
 }
