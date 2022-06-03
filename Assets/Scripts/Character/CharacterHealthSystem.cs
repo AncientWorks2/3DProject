@@ -15,7 +15,7 @@ public class CharacterHealthSystem : HealthSystem
 
     public bool INVENCIBLE;
 
-    public bool hit;
+    public static bool hit;
 
     private InputSystemKeyboard _inputSystem;
 
@@ -53,8 +53,7 @@ public class CharacterHealthSystem : HealthSystem
 
             waitTimer = initialWaitTime;
 
-            hit = true;
-
+            StartCoroutine(GetHit());
         }
 
         if (health <= 0)
@@ -104,6 +103,15 @@ public class CharacterHealthSystem : HealthSystem
         }
     }
 
+    IEnumerator GetHit()
+    {
+        hit = true;
+
+        yield return new WaitForSeconds(1);
+
+        hit = false;
+    }
+
     public float ReturnHealth()
     {
         return health;
@@ -112,10 +120,5 @@ public class CharacterHealthSystem : HealthSystem
     public float ReturnMaxHealth()
     {
         return maxHealth;
-    }
-
-    public bool ReturnHit()
-    {
-        return hit;
     }
 }

@@ -23,7 +23,6 @@ namespace FSM
         private EnemyWarriorNavigation _enNav;
         private ButtonController _buttContr;
         private PlatformController _platformContr;
-        private CharacterHealthSystem _characterHealthSystem;
 
         private void Awake()
         {
@@ -34,9 +33,7 @@ namespace FSM
             _enNav = GetComponent<EnemyWarriorNavigation>();
             _buttContr = GetComponent<ButtonController>();
             _platformContr = GetComponent<PlatformController>();
-            _characterHealthSystem = GetComponent<CharacterHealthSystem>();
-
-    }
+        }
 
     void Update()
         {
@@ -110,11 +107,6 @@ namespace FSM
         public bool ReturnOnHandle()
         {
             return _platformContr.ReturnInOn(); ;
-        }
-
-        public bool ReturnHited()
-        {
-            return _characterHealthSystem.ReturnHit();
         }
 
     }

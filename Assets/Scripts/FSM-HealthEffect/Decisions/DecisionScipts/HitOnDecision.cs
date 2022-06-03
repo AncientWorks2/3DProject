@@ -9,7 +9,7 @@ public class HitOnDecision : FSM.Decision
 {
     public override bool Decide(Controller controller)
     {
-        bool t = (controller.ReturnHited());
+        bool t = (CharacterHealthSystem.hit);
 
         return t;
     }
