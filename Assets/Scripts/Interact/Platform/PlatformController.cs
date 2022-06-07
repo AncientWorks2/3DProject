@@ -21,17 +21,19 @@ public class PlatformController : InteractManager
     {
         if (isOn)
         {
-            return "Presiona [E] para cambiar direccion de la plataforma";
+            return "Press [E] to restore the direction of the platforms";
         }
         else
         {
-            return "Presiona [E] para cambiar direccion de la plataforma";
+            return "Press [E] to chenge the direction of the platforms";
         }
     }
 
     public override void Interact()
     {
         UpdateButton();
+
+        Level01Manager.handle = true;
     }
 
     public bool ReturnInOn()

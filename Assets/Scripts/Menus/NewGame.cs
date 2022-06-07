@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-
-public class LoadGame : MonoBehaviour
+public class NewGame : MonoBehaviour
 {
     public GameObject menuUI;
     public GameObject loadingUI;
@@ -16,11 +15,11 @@ public class LoadGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
-    public void StartGame()
+    public void StartNewGame()
     {
         menuUI.SetActive(false);
         loadingUI.SetActive(true);
@@ -28,7 +27,9 @@ public class LoadGame : MonoBehaviour
         scenesToLoad.Add(SceneManager.LoadSceneAsync("CinematicScene"));
         //scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Additive));
 
-        Level01Manager.newGame = false;
+        PlayerPrefs.SetInt("checkpoint", 0);
+        Level01Manager.newGame = true;
+
 
         StartCoroutine(LoadingScreen());
     }

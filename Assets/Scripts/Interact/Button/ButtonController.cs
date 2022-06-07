@@ -18,6 +18,8 @@ public class ButtonController : InteractManager
     private Text passwordText;
     [SerializeField]
     private int numPassword;
+    [SerializeField]
+    private int level;
 
     private bool isOn;
 
@@ -35,10 +37,25 @@ public class ButtonController : InteractManager
     {
         isOn = true;
 
-        UpdateButton();
-        UpdateLight();
-        UpdateButtonColor();
-        UpdateText();
+        
+        //ButtonElection();
+
+        if (Level01Manager.newGame)
+        {
+            UpdateButton();
+            ButtonElection();
+            ButtonUpdate();
+            UpdateLight();
+            UpdateButtonColor();
+            UpdateText();
+        }
+        else
+        {
+            ButtonUpdate();
+            UpdateLight();
+            UpdateButtonColor();
+            UpdateText();
+        }
     }
 
     private void UpdateButton()
@@ -84,6 +101,54 @@ public class ButtonController : InteractManager
         }
     }
 
+    private void ButtonElection()
+    {
+        if (level == 1)
+        {
+            if (buttonNum == 1)
+            {
+                Level01Manager.buttonPassword1 = isOn;
+            }
+            else if (buttonNum == 2)
+            {
+                Level01Manager.buttonPassword2 = isOn;
+            }
+            else if (buttonNum == 3)
+            {
+                Level01Manager.buttonPassword3 = isOn;
+            }
+            else if (buttonNum == 4)
+            {
+                Level01Manager.buttonPassword4 = isOn;
+            }
+        }
+
+        Debug.Log("CHANGED BUTTON " + buttonNum + " " + isOn);
+
+    }
+
+    private void ButtonUpdate()
+    {
+        if (buttonNum == 1)
+        {
+            isOn = Level01Manager.buttonPassword1;
+        }
+        else if (buttonNum == 2)
+        {
+            isOn = Level01Manager.buttonPassword2;
+        }
+        else if (buttonNum == 3)
+        {
+            isOn = Level01Manager.buttonPassword3;
+        }
+        else if (buttonNum == 4)
+        {
+            isOn = Level01Manager.buttonPassword4;
+        }
+
+        Debug.Log("UPDATED BUTTON " + buttonNum + " " + isOn);
+    }
+
     public override string GetDescription()
     {
         if (isOn)
@@ -102,6 +167,7 @@ public class ButtonController : InteractManager
         UpdateLight();
         UpdateButtonColor();
         UpdateText();
+        ButtonElection();
     }   
     
 

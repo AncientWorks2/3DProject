@@ -19,15 +19,33 @@ public class ButtonPlatformController : InteractManager
     {
         isOn = true;
 
-        UpdateButton();
-        UpdateLight();
-        ButtonElection();
+        if (Level01Manager.newGame)
+        {
+            UpdateButton();
+            ButtonElection();
+            ButtonUpdate();
+            UpdateLight();
+            //ButtonElection();
+        }
+        else
+        {
+            UpdateParticle();
+            ButtonUpdate();
+            UpdateLight();
+        }
     }
 
     private void UpdateButton()
     {
         isOn = !isOn;
 
+        OnIsOn(isOn);
+
+        OnIsOnConsole();
+    }
+
+    private void UpdateParticle()
+    {
         OnIsOn(isOn);
 
         OnIsOnConsole();
@@ -51,6 +69,30 @@ public class ButtonPlatformController : InteractManager
         {
             Level01Manager.button4 = isOn;
         }
+
+        Debug.Log("CHANGED PLAT " + buttonNum + " " + isOn);
+    }
+
+    private void ButtonUpdate()
+    {
+        if (buttonNum == 1)
+        {
+            isOn = Level01Manager.button1;
+        }
+        else if (buttonNum == 2)
+        {
+            isOn = Level01Manager.button2;
+        }
+        else if (buttonNum == 3)
+        {
+            isOn = Level01Manager.button3;
+        }
+        else if (buttonNum == 4)
+        {
+            isOn = Level01Manager.button4;
+        }
+
+        Debug.Log("UPDATED PLAT " + buttonNum + " " + isOn);
     }
 
     private void UpdateLight()

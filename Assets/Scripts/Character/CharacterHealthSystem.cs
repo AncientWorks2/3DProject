@@ -43,6 +43,8 @@ public class CharacterHealthSystem : HealthSystem
     void Start()
     {
         initialWaitTime = waitTimer;
+
+        hit = false;
     }
 
     public override void RestHealth(int restHealthValue)
