@@ -25,10 +25,17 @@ public class LoadGame : MonoBehaviour
         menuUI.SetActive(false);
         loadingUI.SetActive(true);
 
-        scenesToLoad.Add(SceneManager.LoadSceneAsync("CinematicScene"));
-        //scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Additive));
+        if (PlayerPrefs.GetInt("checkpoint") == 0)
+        {
+            scenesToLoad.Add(SceneManager.LoadSceneAsync("CinematicScene"));
+        }
+        else
+        {
+            scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay"));
 
-        Level01Manager.newGame = false;
+            Time.timeScale = 1f;
+        }
+        //scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Additive));
 
         StartCoroutine(LoadingScreen());
     }

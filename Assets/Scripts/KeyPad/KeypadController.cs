@@ -57,6 +57,8 @@ public class KeypadController : MonoBehaviour
         {
             door.lockedByPassword = false;
 
+            Level02Manager.keypadDoorOpened = door.lockedByPassword;
+
             if (audioSource != null)
                 audioSource.PlayOneShot(correctSound);
 

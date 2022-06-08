@@ -126,6 +126,8 @@ public class PickupObjects : MonoBehaviour
         {
             loadTelelk.fillAmount += Time.deltaTime;
         }
+
+        Level02Manager.objectPicked = true;
     }
 
 }

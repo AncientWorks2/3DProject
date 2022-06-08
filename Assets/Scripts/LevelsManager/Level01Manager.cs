@@ -20,11 +20,7 @@ public static class Level01Manager
 
     public static bool buttonPassword4;
 
-    public static Transform playerTrans;
-
     public static Transform boxTrans;
 
     public static bool handle;
-
-    public static bool newGame;
 }

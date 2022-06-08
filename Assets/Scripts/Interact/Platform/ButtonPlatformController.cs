@@ -17,20 +17,19 @@ public class ButtonPlatformController : InteractManager
     // Start is called before the first frame update
     void Start()
     {
-        isOn = true;
 
-        if (Level01Manager.newGame)
+        if (PlayerPrefs.GetInt("checkpoint") == 0)
         {
+            isOn = true;
             UpdateButton();
             ButtonElection();
             ButtonUpdate();
             UpdateLight();
-            //ButtonElection();
         }
         else
         {
-            UpdateParticle();
             ButtonUpdate();
+            UpdateParticle();
             UpdateLight();
         }
     }
@@ -69,8 +68,6 @@ public class ButtonPlatformController : InteractManager
         {
             Level01Manager.button4 = isOn;
         }
-
-        Debug.Log("CHANGED PLAT " + buttonNum + " " + isOn);
     }
 
     private void ButtonUpdate()
@@ -91,8 +88,6 @@ public class ButtonPlatformController : InteractManager
         {
             isOn = Level01Manager.button4;
         }
-
-        Debug.Log("UPDATED PLAT " + buttonNum + " " + isOn);
     }
 
     private void UpdateLight()

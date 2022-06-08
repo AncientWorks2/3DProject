@@ -24,7 +24,15 @@ public class BallPuzzleSystem : BallPuzzleCollision
 
     public BoxCategory categoryBox;
     private bool OnTriggerYellow, OnTriggerRed, OnTriggerGreen, OnTriggerBlue;
-    
+
+    private void Start()
+    {
+        OnTriggerYellow = Level02Manager.yellowBox;
+        OnTriggerRed = Level02Manager.redBox;
+        OnTriggerGreen = Level02Manager.greenBox;
+        OnTriggerBlue = Level02Manager.blueBox;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -55,11 +63,14 @@ public class BallPuzzleSystem : BallPuzzleCollision
         {
            passwordText.text = numPassword.ToString();
 
+            
         }
         else
         {
             passwordText.text = "";
         }
+
+        Level02Manager.yellowBox = OnTriggerYellow;
     }
 
     void RedBox()
@@ -72,6 +83,8 @@ public class BallPuzzleSystem : BallPuzzleCollision
         {
             passwordText.text = "";
         }
+
+        Level02Manager.redBox = OnTriggerRed;
     }
 
     void GreenBox()
@@ -84,6 +97,8 @@ public class BallPuzzleSystem : BallPuzzleCollision
         {
             passwordText.text = "";
         }
+
+        Level02Manager.greenBox = OnTriggerGreen;
     }
     void BlueBox()
     {
@@ -95,6 +110,8 @@ public class BallPuzzleSystem : BallPuzzleCollision
         {
             passwordText.text = "";
         }
+
+        Level02Manager.blueBox = OnTriggerBlue;
     }
 
     protected override void OnTrigger(Collider other)

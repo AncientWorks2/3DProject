@@ -15,6 +15,8 @@ public class ButtonBigDoor : InteractManager
     void Start()
     {
         UpdateLight();
+
+        door.isOpeningSlide = Level02Manager.bigDoorOpnened;
     }
     void OpeningDoor()
     {
@@ -28,6 +30,8 @@ public class ButtonBigDoor : InteractManager
         {
             door.isOpeningSlide = false;
         }
+
+        Level02Manager.bigDoorOpnened = door.isOpeningSlide;
     }
     void UpdateLight()
     {
@@ -43,7 +47,7 @@ public class ButtonBigDoor : InteractManager
     }
     public override string GetDescription()
     {
-        if (isOpen) return " Press [E] to close the door";
+        if (door.isOpeningSlide) return " Press [E] to close the door";
         return "Press [E] to open the door";
 
 

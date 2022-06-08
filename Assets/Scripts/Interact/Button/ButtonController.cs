@@ -34,14 +34,13 @@ public class ButtonController : InteractManager
     }
     // Start is called before the first frame update
     void Start()
-    {
-        isOn = true;
-
-        
+    {        
         //ButtonElection();
 
-        if (Level01Manager.newGame)
+        if (PlayerPrefs.GetInt("checkpoint") == 0)
         {
+            isOn = true;
+
             UpdateButton();
             ButtonElection();
             ButtonUpdate();

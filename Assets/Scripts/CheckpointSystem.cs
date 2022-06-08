@@ -16,8 +16,6 @@ public class CheckpointSystem : MonoBehaviour
         prefvalue = PlayerPrefs.GetInt("checkpoint");
 
         CheckpointChecker();
-
-        charge = false;
     }
 
     // Update is called once per frame
@@ -25,18 +23,10 @@ public class CheckpointSystem : MonoBehaviour
     {
         prefvalue = PlayerPrefs.GetInt("checkpoint");
 
-        if (!charge)
-        {
-            
-            charge = true;
-        }
-
         if (Level01Manager.button1 && Level01Manager.button2
             && Level01Manager.button3 && Level01Manager.button4 && prefvalue == 0)
         {
             PlayerPrefs.SetInt("checkpoint", 1);
-
-            //Level01Manager.playerTrans = player.transform;
 
             Debug.Log("Saved checkpoint 1");
         }
@@ -46,18 +36,31 @@ public class CheckpointSystem : MonoBehaviour
             PlayerPrefs.SetInt("checkpoint", 2);
 
             Debug.Log("Saved checkpoint 2");
-
-
-            //Level01Manager.playerTrans = player.transform;
         }
         if (Level01Manager.handle && prefvalue == 2)
         {
             PlayerPrefs.SetInt("checkpoint", 3);
 
             Debug.Log("Saved checkpoint 3");
+        }
+        if (Level02Manager.objectPicked && !Level02Manager.keypadDoorOpened && prefvalue == 3)
+        {
+            PlayerPrefs.SetInt("checkpoint", 4);
 
+            Debug.Log("Saved checkpoint 4");
+        }
+        if (Level02Manager.bigDoorOpnened && prefvalue == 4)
+        {
+            PlayerPrefs.SetInt("checkpoint", 5);
 
-            //Level01Manager.playerTrans = player.transform;
+            Debug.Log("Saved checkpoint 5");
+        }
+        if (Level02Manager.redBox && Level02Manager.blueBox && Level02Manager.greenBox 
+            && Level02Manager.yellowBox && prefvalue == 5)
+        {
+            PlayerPrefs.SetInt("checkpoint", 6);
+
+            Debug.Log("Saved checkpoint 6");
         }
     }
 
@@ -76,6 +79,22 @@ public class CheckpointSystem : MonoBehaviour
         if (prefvalue > 2)
         {
             Checkpoint3();
+            Debug.Log("Charging checkpoint 3");
+        }
+        if (prefvalue > 3)
+        {
+            Checkpoint4();
+            Debug.Log("Charging checkpoint 4");
+        }
+        if (prefvalue > 4)
+        {
+            Checkpoint5();
+            Debug.Log("Charging checkpoint 5");
+        }
+        if (prefvalue > 5)
+        {
+            Checkpoint6();
+            Debug.Log("Charging checkpoint 6");
         }
     }
 
@@ -85,11 +104,6 @@ public class CheckpointSystem : MonoBehaviour
         Level01Manager.button2 = true;
         Level01Manager.button3 = true;
         Level01Manager.button4 = true;
-
-        //player.transform.position = Level01Manager.playerTrans.position;
-        //player.transform.rotation = Level01Manager.playerTrans.rotation;
-
-        Debug.Log("CheckPoint1");
     }
 
     private void Checkpoint2()
@@ -98,12 +112,31 @@ public class CheckpointSystem : MonoBehaviour
         Level01Manager.buttonPassword2 = true;
         Level01Manager.buttonPassword3 = true;
         Level01Manager.buttonPassword4 = true;
-
-        Debug.Log("Checkpoint2");
     }
 
     private void Checkpoint3()
     {
-        Debug.Log("Checkpoint3");
+        Level01Manager.handle = true;
+    }
+
+    private void Checkpoint4()
+    {
+        //Level02Manager.objectPicked = true;
+
+        GameObject.FindWithTag("Player").GetComponent<PickupObjects>().enabled = true;
+        Level02Manager.keypadDoorOpened = false;
+    }
+
+    private void Checkpoint5()
+    {
+        Level02Manager.bigDoorOpnened = true;
+    }
+
+    private void Checkpoint6()
+    {
+        Level02Manager.yellowBox = true;
+        Level02Manager.redBox = true;
+        Level02Manager.greenBox = true;
+        Level02Manager.blueBox = true;
     }
 }

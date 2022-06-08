@@ -28,8 +28,6 @@ public class NewGame : MonoBehaviour
         //scenesToLoad.Add(SceneManager.LoadSceneAsync("Gameplay", LoadSceneMode.Additive));
 
         PlayerPrefs.SetInt("checkpoint", 0);
-        Level01Manager.newGame = true;
-
 
         StartCoroutine(LoadingScreen());
     }
