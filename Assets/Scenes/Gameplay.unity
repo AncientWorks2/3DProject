@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2283,6 +2283,8 @@ GameObject:
   m_Component:
   - component: {fileID: 371870814}
   - component: {fileID: 371870813}
+  - component: {fileID: 371870815}
+  - component: {fileID: 371870816}
   m_Layer: 5
   m_Name: HealthSlider
   m_TagString: Untagged
@@ -2362,6 +2364,39 @@ RectTransform:
   m_AnchoredPosition: {x: 200.45703, y: -22.339111}
   m_SizeDelta: {x: 400.9143, y: 44.6784}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &371870815
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371870812}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b0479841815939548b3785a32b073f2b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &371870816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371870812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1510b4cb4781fd42bd8088456343aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 11400000, guid: ad0fb333f301e4d44b5580b2210b5296, type: 2}
+  remainState: {fileID: 0}
 --- !u!1 &384402386
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,7 +3125,7 @@ MonoBehaviour:
   m_FillRect: {fileID: 1701072568}
   m_HandleRect: {fileID: 257108700}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.001
   m_MaxValue: 0.3
   m_WholeNumbers: 0
   m_Value: 0.15
@@ -6148,6 +6183,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1163481304}
   - component: {fileID: 1163481303}
+  - component: {fileID: 1163481305}
+  - component: {fileID: 1163481306}
   m_Layer: 5
   m_Name: StaminaSlider
   m_TagString: Untagged
@@ -6228,6 +6265,39 @@ RectTransform:
   m_AnchoredPosition: {x: 154.8999, y: -56.399902}
   m_SizeDelta: {x: 309.8083, y: 44.1891}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1163481305
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163481302}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 903779f106116be44ab193c2f5766072, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1163481306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163481302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1510b4cb4781fd42bd8088456343aa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 11400000, guid: 2d528a116ad9a6942b735e1e55b71304, type: 2}
+  remainState: {fileID: 0}
 --- !u!1 &1204105427
 GameObject:
   m_ObjectHideFlags: 0
@@ -7777,6 +7847,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433039277}
   m_CullTransparentMesh: 1
+--- !u!1 &1450499595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450499598}
+  - component: {fileID: 1450499597}
+  - component: {fileID: 1450499596}
+  m_Layer: 5
+  m_Name: BrainCheckPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1450499596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450499595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 875521997aaf6f046b665985ad55bde6, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 0.583
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1450499597
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450499595}
+  m_CullTransparentMesh: 1
+--- !u!224 &1450499598
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450499595}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1494434404}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -350}
+  m_SizeDelta: {x: 125, y: 125}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1463594805
 GameObject:
   m_ObjectHideFlags: 0
@@ -7990,6 +8135,7 @@ RectTransform:
   - {fileID: 255484757}
   - {fileID: 1775085644}
   - {fileID: 732565886}
+  - {fileID: 1450499598}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8865,7 +9011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3faf1e87e5c344995879807cb43523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1911139618}
+  brain: {fileID: 1450499596}
+  delayBrain: 3
 --- !u!4 &1741223317
 Transform:
   m_ObjectHideFlags: 0
@@ -10480,8 +10627,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 112.42438, y: 9, z: 52.062508}
-  m_Center: {x: 46.848694, y: 4.084635, z: 1.1641312}
+  m_Size: {x: 197.88724, y: 9, z: 52.062508}
+  m_Center: {x: 4.117264, y: 4.084635, z: 1.1641312}
 --- !u!4 &2027250792
 Transform:
   m_ObjectHideFlags: 0

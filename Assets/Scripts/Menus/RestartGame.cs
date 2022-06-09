@@ -7,6 +7,13 @@ public class RestartGame : MonoBehaviour
 {
     public void ResetGame()
     {
-        SceneManager.LoadScene("CinematicScene");
+        if (PlayerPrefs.GetInt("checkpoint") == 0)
+        {
+            SceneManager.LoadSceneAsync("CinematicScene");
+        }
+        else
+        {
+            SceneManager.LoadSceneAsync("Gameplay");
+        }
     }
 }

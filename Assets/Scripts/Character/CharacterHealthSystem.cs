@@ -17,6 +17,8 @@ public class CharacterHealthSystem : HealthSystem
 
     public static bool hit;
 
+    public static bool increase;
+
     private InputSystemKeyboard _inputSystem;
 
     public event Action OnHealthZero = delegate { };
@@ -77,6 +79,8 @@ public class CharacterHealthSystem : HealthSystem
             {
                 health += healthIncrease * Time.deltaTime;
 
+                increase = true;
+
                 if (health >= maxHealth)
                 {
                     waitTimer = initialWaitTime;
@@ -85,11 +89,15 @@ public class CharacterHealthSystem : HealthSystem
             else
             {
                 waitTimer -= Time.deltaTime;
+
+                increase = false;
             }
         }
         else
         {
             waitTimer = initialWaitTime;
+
+            increase = false;
         }
     }
 
@@ -122,5 +130,10 @@ public class CharacterHealthSystem : HealthSystem
     public float ReturnMaxHealth()
     {
         return maxHealth;
+    }
+
+    public bool ReturnHealthIncrease()
+    {
+        return increase;
     }
 }

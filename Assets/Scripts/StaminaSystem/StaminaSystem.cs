@@ -22,11 +22,13 @@ public class StaminaSystem : MonoBehaviour
     private float activeStaminaDecrease;
     private float saveWaitTimer;
 
-    private bool decrease;
+    public static bool decrease;
     private bool crouched;
     private bool running;
     private bool jumping;
     private bool waiting;
+
+    public static bool increase;
 
     //God
     private bool STAMINA;
@@ -134,6 +136,8 @@ public class StaminaSystem : MonoBehaviour
 
                 stamina += staminaIncrease * Time.deltaTime;
 
+                increase = true;
+
                 if (stamina >= maxStamina)
                 {
                     waitTimer = saveWaitTimer;
@@ -142,7 +146,13 @@ public class StaminaSystem : MonoBehaviour
             else
             {
                 waitTimer -= Time.deltaTime;
+
+                increase = false;
             }
+        }
+        else
+        {
+            increase = false;
         }
 
         //Send the current stamina value and max stamina value to the StaminaManager static class
@@ -196,5 +206,15 @@ public class StaminaSystem : MonoBehaviour
         }
 
         Debug.Log("Stamina: " + STAMINA);
+    }
+
+    public bool ReturnStaminaIncrease()
+    {
+        return increase;
+    }
+
+    public bool ReturnStaminaDecrease()
+    {
+        return decrease;
     }
 }

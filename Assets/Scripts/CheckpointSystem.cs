@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CheckpointSystem : MonoBehaviour
 {
-    /*[SerializeField]
-    private Transform player;*/
+    [SerializeField]
+    private Image brain;
+    [SerializeField]
+    private float delayBrain;
 
     private int prefvalue;
-    private bool charge;
+    private bool save;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,8 @@ public class CheckpointSystem : MonoBehaviour
             PlayerPrefs.SetInt("checkpoint", 1);
 
             Debug.Log("Saved checkpoint 1");
+
+            save = true;
         }
         if (Level01Manager.buttonPassword1 && Level01Manager.buttonPassword2 
             && Level01Manager.buttonPassword3 && Level01Manager.buttonPassword4 && prefvalue == 1)
@@ -36,12 +41,16 @@ public class CheckpointSystem : MonoBehaviour
             PlayerPrefs.SetInt("checkpoint", 2);
 
             Debug.Log("Saved checkpoint 2");
+
+            save = true;
         }
         if (Level01Manager.handle && prefvalue == 2)
         {
             PlayerPrefs.SetInt("checkpoint", 3);
 
             Debug.Log("Saved checkpoint 3");
+
+            save = true;
         }
         if (Level02Manager.objectPicked && !Level02Manager.keypadDoorOpened && prefvalue == 3)
         {
@@ -54,6 +63,8 @@ public class CheckpointSystem : MonoBehaviour
             PlayerPrefs.SetInt("checkpoint", 5);
 
             Debug.Log("Saved checkpoint 5");
+
+            save = true;
         }
         if (Level02Manager.redBox && Level02Manager.blueBox && Level02Manager.greenBox 
             && Level02Manager.yellowBox && prefvalue == 5)
@@ -61,6 +72,25 @@ public class CheckpointSystem : MonoBehaviour
             PlayerPrefs.SetInt("checkpoint", 6);
 
             Debug.Log("Saved checkpoint 6");
+
+            save = true;
+        }
+
+
+        if (save)
+        {
+            if (brain.fillAmount < 1)
+            {
+                brain.fillAmount += Time.deltaTime / delayBrain;
+            }
+            else
+            {
+                save = false;
+            }
+        }
+        else
+        {
+            brain.fillAmount = 0;
         }
     }
 

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "FSM/HealthEffect/Decision/HitOff")]
-
 public class HotOffDecision : FSM.Decision
 {
     public override bool Decide(Controller controller)

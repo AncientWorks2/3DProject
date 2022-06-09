@@ -108,6 +108,5 @@ namespace FSM
         {
             return _platformContr.ReturnInOn(); ;
         }
-
     }
 }
